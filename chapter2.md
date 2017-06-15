@@ -5,7 +5,8 @@ description : Esimese nädala ülesanded
 ## Arvutamine
 
 
-*** =instructions ## Juhised
+*** =instructions
+
 Lahenda ülesanded
 
 1. Leia arvu 25 kümnendlogaritm.
