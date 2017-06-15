@@ -92,7 +92,7 @@ test_output_contains(expr = "log10(z)",
  
 test_student_typed("log10(z)",
                     fixed = FALSE,
-                    not_typed_msg = "Kas kasutasid teises ülesandes eelnevalt defineeritud muutujat `z`?")
+                    not_typed_msg = "Kas kasutad teises ülesandes funktsiooni `log10` muutujale `z`?")
 
  
  
@@ -105,7 +105,7 @@ test_function_result(name = "log",
                      error_msg = "Kolmandas ülesandes on midagi valesti!",
                      incorrect_msg = "Oled funktsioonile `log` andnud vale argumendi")
 
-test_output_contains(expr = "log(z)",
+test_output_contains(expr = "log( + z +)",
                      times = 1,
                      incorrect_msg = "Midagi läks valesti! Kontrolli kolmanda ülesande vastust.")
  
