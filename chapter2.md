@@ -70,7 +70,7 @@ sum(w)
 ```{r}
 msg_undefinedz = "Kontrolli, kas oled defineerinud muutuja `z`."
 msg_incorrectz = "Kontrolli, kas oled muutujale `z` omistanud õige väärtuse."
-test_object("z", eval = FALSE, 
+test_object("z",  
             undefined_msg = msg_undefinedz,
             incorrect_msg = msg_incorrectz) 
 
