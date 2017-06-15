@@ -14,6 +14,8 @@ Lahenda ülesanded
 3. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$.
 
 *** =hint
+- Logaritmifunktsiooni abilehe saad avada kui kirjutad konsoolile `?log` ja vajutad enter-klahvi
+- Viimases ülesandes kasuta `sum` käsku ja vektori moodustamist operaatoriga `:`
 
 *** =pre_exercise_code
 ```{r}
