@@ -87,7 +87,7 @@ test_function_result(name = "log10",
  
 test_output_contains(expr = "log10(z)",
                      times = 1,
-                     incorrect_msg = "Kontrolli, kas teise ülesande käask on kirjas kujul ´log10(z)´")
+                     incorrect_msg = "Midagi läks valesti! Kontrolli teise ülesande vastust.")
  
  
  
@@ -99,8 +99,17 @@ test_function_result(name = "log",
                      error_msg = "Kolmandas ülesandes on midagi valesti!",
                      incorrect_msg = "Oled funktsioonile `log` andnud vale argumendi")
 
+test_output_contains(expr = "log(z)",
+                     times = 1,
+                     incorrect_msg = "Midagi läks valesti! Kontrolli kolmanda ülesande vastust.")
+ 
+ 
+ 
   
-
+  
+  
+  
+# neljas
 msg_undefinedw = "Kontrolli, kas oled defineerinud muutuja `w`."
 msg_incorrectw = "Kontrolli, kas oled muutujale `w` omistanud õige väärtuse."
 test_object("w",  
@@ -108,7 +117,7 @@ test_object("w",
             incorrect_msg = msg_incorrectw) 
 
 
-
+# viies
 test_function_result(name = "sum",
                      index = 1,
                      eq_condition = "equivalent",
