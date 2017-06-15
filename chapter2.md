@@ -2,7 +2,7 @@
 title       : Esimene kodutöö
 description : Esimese nädala ülesanded
 --- type:NormalExercise lang:r xp:100 skills:1 key:07547c77c0
-## <<<New Exercise>>>
+## <<<Arvutamine>>>
 
 
 *** =instructions
