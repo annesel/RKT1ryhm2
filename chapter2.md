@@ -68,11 +68,11 @@ sum(w)
 
 *** =sct
 ```{r}
-msg_undefinedx = "Make sure to define a variable `x`."
-msg_incorrectx = "Make sure that you assign the correct value to `x`."
-test_object("x", 
-            undefined_msg = msg_undefinedx,
-            incorrect_msg = msg_incorrectx) 
+msg_undefinedz = "Make sure to define a variable `z`."
+msg_incorrectz = "Make sure that you assign the correct value to `z`."
+test_object("z", 
+            undefined_msg = msg_undefinedz,
+            incorrect_msg = msg_incorrectz) 
 
 
 msg_undefinedw = "Make sure to define a variable `w`."
