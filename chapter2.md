@@ -82,7 +82,7 @@ test_function_result(name = "log10",
                      eq_condition = "equivalent",
                      not_called_msg = "Teises ülesandes pead kasutama funktsiooni `log10`",
                      error_msg = "Teises ülesandes on midagi valesti!",
-                     incorrect_msg = "Oled funktsioonile `log10` andnud vale argumendi")
+                     incorrect_msg = "Oled funktsioonile `log10` andnud vale väärtusega argumendi")
 
  
 test_output_contains(expr = "log10(z)",
@@ -103,7 +103,7 @@ test_function_result(name = "log",
                      eq_condition = "equivalent",
                      not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `log`",
                      error_msg = "Kolmandas ülesandes on midagi valesti!",
-                     incorrect_msg = "Oled funktsioonile `log` andnud vale argumendi")
+                     incorrect_msg = "Oled funktsioonile `log` andnud vale väärtusega argumendi")
 
 test_output_contains(expr = "log( + z +)",
                      times = 1,
