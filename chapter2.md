@@ -74,12 +74,24 @@ test_object("z",
             undefined_msg = msg_undefinedz,
             incorrect_msg = msg_incorrectz) 
 
+test_function(name = "log10",
+              args = "z", index = 1,
+              eval = TRUE,
+              eq_condition = "equivalent",
+              not_called_msg = "Teises ülesandes pead kasutama funktsiooni `log10`",
+              args_not_specified_msg = "Teises ülesandes pead rakendama funktsiooni `log10` argumendile `z`",
+              incorrect_msg = "Millal see tekst välja tuleb??")
+
+
+ 
+
 
 msg_undefinedw = "Kontrolli, kas oled defineerinud muutuja `w`."
 msg_incorrectw = "Kontrolli, kas oled muutujale `w` omistanud õige väärtuse."
 test_object("w", 
             undefined_msg = msg_undefinedw,
             incorrect_msg = msg_incorrectw) 
+
 
 
 
