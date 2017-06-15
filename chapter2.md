@@ -2,11 +2,12 @@
 title       : Esimene kodutöö
 description : Esimese nädala ülesanded
 --- type:NormalExercise lang:r xp:100 skills:1 key:07547c77c0
-## <<<Arvutamine>>>
+## Arvutamine
 
 
 *** =instructions
 Lahenda ülesanded
+
 1. Leia arvu 25 kümnendlogaritm.
 2. Leia arvu 25 naturaallogaritm.
 3. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^250 i$.
