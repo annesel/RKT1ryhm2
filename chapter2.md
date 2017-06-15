@@ -16,8 +16,9 @@ Lahenda ülesanded
 1. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$, kasutades eelnevalt defineeritud vektorit w.
 
 *** =hint
-- Logaritmifunktsiooni abilehe saad avada kui kirjutad konsoolile `?log` ja vajutad enter-klahvi
-- Viimases ülesandes kasuta `sum` käsku ja vektori moodustamist operaatoriga `:`
+- Logaritmifunktsiooni abilehe saad avada kui kirjutad konsoolile `?log` ja vajutad enter-klahvi.
+- Väärtuseid  $1, 2, \ldots, 250$, sisaldava vektori moodustamiseks kasuta operaatorit `:` või käsku `seq`.
+- Viimases ülesandes kasuta `sum` käsku.
 
 *** =pre_exercise_code
 ```{r}
