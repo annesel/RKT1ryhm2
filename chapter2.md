@@ -80,10 +80,18 @@ test_function_result(name = "log10",
                      index = 1,
                      eq_condition = "equivalent",
                      not_called_msg = "Teises ülesandes pead kasutama funktsiooni `log10`",
-                     error_msg = "Oled funktsioonile `log10` andnud vale argumendi",
-                     incorrect_msg = "Millal see tekst välja tuleb??")
+                     error_msg = "Teises ülesandes on midagi valesti!",
+                     incorrect_msg = "Oled funktsioonile `log10` andnud vale argumendi")
 
  
+test_function_result(name = "log",
+                     index = 1,
+                     eq_condition = "equivalent",
+                     not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `log`",
+                     error_msg = "Kolmandas ülesandes on midagi valesti!",
+                     incorrect_msg = "Oled funktsioonile `log` andnud vale argumendi")
+
+  
 
 msg_undefinedw = "Kontrolli, kas oled defineerinud muutuja `w`."
 msg_incorrectw = "Kontrolli, kas oled muutujale `w` omistanud õige väärtuse."
@@ -91,6 +99,16 @@ test_object("w",
             undefined_msg = msg_undefinedw,
             incorrect_msg = msg_incorrectw) 
 
+
+
+test_function_result(name = "sum",
+                     index = 1,
+                     eq_condition = "equivalent",
+                     not_called_msg = "Viimases ülesandes peaksid kasutama funktsiooni `sum`",
+                     error_msg = "Viimases ülesandes on midagi valesti!",
+                     incorrect_msg = "Oled funktsioonile `sum` andnud vale argumendi")
+
+  
 
 
 
