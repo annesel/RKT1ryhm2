@@ -91,9 +91,9 @@ test_output_contains(expr = "log10(z)",
                      incorrect_msg = "Midagi läks valesti! Kontrolli teise ülesande vastust.")
  
  
-#test_student_typed("log10(z)",
-#                    fixed = FALSE,
-#                    not_typed_msg = "Kas kasutad teises ülesandes funktsiooni `log10` argumendina muutujat `z`?")
+test_student_typed("log10(z)",
+                    fixed = FALSE,
+                    not_typed_msg = "Kas kasutad teises ülesandes funktsiooni `log10` argumendina muutujat `z`?")
 
  
  
