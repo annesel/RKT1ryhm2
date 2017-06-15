@@ -79,13 +79,11 @@ test_object("z",
 test_function_result(name = "log10",
                      index = 1,
                      eq_condition = "equivalent",
-                     not_called_msg = "Teises ülesandes pead kasutama funktsiooni `log10`",,
+                     not_called_msg = "Teises ülesandes pead kasutama funktsiooni `log10`",
                      eval_error_msg = "Oled funktsioonile `log10` andnud vale argumendi",
                      incorrect_msg = "Millal see tekst välja tuleb??")
 
-
-
-
+ 
  
 
 
