@@ -68,6 +68,7 @@ sum(w)
 
 *** =sct
 ```{r}
+# esimene
 msg_undefinedz = "Kontrolli, kas oled defineerinud muutuja `z`."
 msg_incorrectz = "Kontrolli, kas oled muutujale `z` omistanud õige väärtuse."
 test_object("z",  
@@ -75,7 +76,7 @@ test_object("z",
             incorrect_msg = msg_incorrectz) 
 
  
-
+# teine
 test_function_result(name = "log10",
                      index = 1,
                      eq_condition = "equivalent",
@@ -84,6 +85,13 @@ test_function_result(name = "log10",
                      incorrect_msg = "Oled funktsioonile `log10` andnud vale argumendi")
 
  
+test_output_contains(expr = "log10(z)",
+                     times = 1,
+                     incorrect_msg = "Kontrolli, kas teise ülesande käask on kirjas kujul ´log10(z)´")
+ 
+ 
+ 
+# kolmas
 test_function_result(name = "log",
                      index = 1,
                      eq_condition = "equivalent",
