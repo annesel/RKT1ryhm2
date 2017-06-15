@@ -9,11 +9,11 @@ description : Esimese nädala ülesanded
 
 Lahenda ülesanded
 
-1. Omista arv $25 \pi$ muutujale $z$
-1. Leia arvu $25 \pi$ kümnendlogaritm, kasutades muutujat $z$.
-1. Leia arvu $25 \pi$ naturaallogaritm, kasutades muutujat $z$.
-1. Moodusta vektor ´w´, milles on arvud $1, 2, \ldots, 250$.
-1. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$, kasutades eelnevalt defineeritud vektorit w.
+1. Omista arv $25 \pi$ muutujale `z`.
+1. Leia arvu $25 \pi$ kümnendlogaritm, kasutades muutujat `z`.
+1. Leia arvu $25 \pi$ naturaallogaritm, kasutades muutujat `z`.
+1. Moodusta vektor `w`., milles on arvud $1, 2, \ldots, 250$.
+1. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$, kasutades eelnevalt defineeritud vektorit $w$.
 
 *** =hint
 - Logaritmifunktsiooni abilehe saad avada kui kirjutad konsoolile `?log` ja vajutad enter-klahvi.
