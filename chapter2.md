@@ -9,9 +9,11 @@ description : Esimese nädala ülesanded
 
 Lahenda ülesanded
 
-1. Leia arvu 25 kümnendlogaritm.
-2. Leia arvu 25 naturaallogaritm.
-3. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$.
+1. Omista arv $25 \pi$ muutujale $z$
+1. Leia arvu $25 \pi$ kümnendlogaritm, kasutades muutujat $z$.
+1. Leia arvu $25 \pi$ naturaallogaritm, kasutades muutujat $z$.
+1. Moodusta vektor ´w´, milles on arvud $1, 2, \ldots, 250$.
+1. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$, kasutades eelnevalt defineeritud vektorit w.
 
 *** =hint
 - Logaritmifunktsiooni abilehe saad avada kui kirjutad konsoolile `?log` ja vajutad enter-klahvi
@@ -24,13 +26,20 @@ Lahenda ülesanded
 
 *** =sample_code
 ```{r}
-# Leia arvu 25 kümnendlogaritm
+# Omista muutujale z nõutud väärtus
 
 
-# Leia arvu 25 naturaallogaritm
+# Leia muutuja z kümnendlogaritm
 
 
-# Liida arvud ühest kuni 250-ni 
+# Leia muutuja z naturaallogaritm
+
+
+# Moodusta vektor w, milles on arvud 1, 2, ..., 250
+
+
+# Liida arvud ühest kuni 250-ni, kasutades eelnevalt defineeritud vektorit w
+
 
 
 
@@ -38,14 +47,21 @@ Lahenda ülesanded
 
 *** =solution
 ```{r}
-# Leia arvu 25 kümnendlogaritm
-log10(25)
+# Omista muutujale z nõutud väärtus
+z <- 25*pi
 
-# Leia arvu 25 naturaallogaritm
-log(25)
+# Leia muutuja z kümnendlogaritm
+log10(z)
 
-# Liida arvud ühest kuni 250-ni 
-sum(1:25)
+# Leia muutuja z naturaallogaritm
+log(z)
+
+# Moodusta vektor w, milles on arvud 1, 2, ..., 250
+w <- 1:250
+
+# Liida arvud ühest kuni 250-ni, kasutades eelnevalt defineeritud vektorit w
+sum(w)
+
 
 ```
 
