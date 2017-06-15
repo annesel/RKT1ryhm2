@@ -80,12 +80,10 @@ test_function_result(name = "log10",
                      index = 1,
                      eq_condition = "equivalent",
                      not_called_msg = "Teises ülesandes pead kasutama funktsiooni `log10`",
-                     eval_error_msg = "Oled funktsioonile `log10` andnud vale argumendi",
+                     error_msg = "Oled funktsioonile `log10` andnud vale argumendi",
                      incorrect_msg = "Millal see tekst välja tuleb??")
 
  
- 
-
 
 msg_undefinedw = "Kontrolli, kas oled defineerinud muutuja `w`."
 msg_incorrectw = "Kontrolli, kas oled muutujale `w` omistanud õige väärtuse."
