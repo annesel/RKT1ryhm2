@@ -92,7 +92,7 @@ test_output_contains(expr = "log10(z)",
  
 test_student_typed("log10(z)",
                     fixed = FALSE,
-                    not_typed_msg = "Kas kasutad teises ülesandes funktsiooni `log10` muutujale `z`?")
+                    not_typed_msg = "Kas kasutad teises ülesandes funktsiooni `log10` argumendina muutujat `z`?")
 
  
  
