@@ -70,16 +70,19 @@ sum(w)
 ```{r}
 msg_undefinedz = "Kontrolli, kas oled defineerinud muutuja `z`."
 msg_incorrectz = "Kontrolli, kas oled muutujale `z` omistanud õige väärtuse."
-test_object("z", 
+test_object("z",eval = TRUE, 
             undefined_msg = msg_undefinedz,
             incorrect_msg = msg_incorrectz) 
 
+
+
+
 test_function(name = "log10",
-              args = "z", index = 1,
+              args = NULL, index = 1,
               eval = TRUE,
               eq_condition = "equivalent",
               not_called_msg = "Teises ülesandes pead kasutama funktsiooni `log10`",
-              args_not_specified_msg = "Teises ülesandes pead rakendama funktsiooni `log10` argumendile `z`",
+              args_not_specified_msg = "Teises ülesandes pead rakendama funktsiooni `log10` muutujale `z`",
               incorrect_msg = "Millal see tekst välja tuleb??")
 
 
@@ -88,7 +91,7 @@ test_function(name = "log10",
 
 msg_undefinedw = "Kontrolli, kas oled defineerinud muutuja `w`."
 msg_incorrectw = "Kontrolli, kas oled muutujale `w` omistanud õige väärtuse."
-test_object("w", 
+test_object("w", eval = TRUE,
             undefined_msg = msg_undefinedw,
             incorrect_msg = msg_incorrectw) 
 
