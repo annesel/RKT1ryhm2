@@ -68,15 +68,15 @@ sum(w)
 
 *** =sct
 ```{r}
-msg_undefinedz = "Make sure to define a variable `z`."
-msg_incorrectz = "Make sure that you assign the correct value to `z`."
+msg_undefinedz = "Kontrolli, kas oled defineerinud muutuja `z`."
+msg_incorrectz = "Kontrolli, kas oled muutujale `z` omistanud õige väärtuse."
 test_object("z", 
             undefined_msg = msg_undefinedz,
             incorrect_msg = msg_incorrectz) 
 
 
-msg_undefinedw = "Make sure to define a variable `w`."
-msg_incorrectw = "Make sure that you assign the correct value to `w`."
+msg_undefinedw = "Kontrolli, kas oled defineerinud muutuja `w`."
+msg_incorrectw = "Kontrolli, kas oled muutujale `w` omistanud õige väärtuse."
 test_object("w", 
             undefined_msg = msg_undefinedw,
             incorrect_msg = msg_incorrectw) 
