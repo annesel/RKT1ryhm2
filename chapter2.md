@@ -9,7 +9,7 @@ description : Esimese nädala ülesanded
 
 Lahenda ülesanded
 
-1. Omista arv $25 \pi$ muutujale `z`.
+1. Omista arv $25 \pi$ muutujale `z`. Arv $\pi$ on R-is muutuja `pi` nime all.
 1. Leia arvu $25 \pi$ kümnendlogaritm, kasutades muutujat `z`.
 1. Leia arvu $25 \pi$ naturaallogaritm, kasutades muutujat `z`.
 1. Moodusta vektor `w`, milles on arvud $1, 2, \ldots, 250$.
