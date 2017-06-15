@@ -117,6 +117,9 @@ test_object("w",
             incorrect_msg = msg_incorrectw) 
 
 
+
+
+
 # viies
 test_function_result(name = "sum",
                      index = 1,
@@ -126,10 +129,16 @@ test_function_result(name = "sum",
                      incorrect_msg = "Oled funktsioonile `sum` andnud vale argumendi")
 
   
+  
+test_output_contains(expr = "sum(w)",
+                     times = 1,
+                     incorrect_msg = "Midagi läks valesti! Kontrolli viimase ülesande vastust.")
+ 
+ 
+ 
 
 
-
-success_msg("Good job!")
+success_msg("Tubli!")
 
 
 
