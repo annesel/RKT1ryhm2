@@ -7,7 +7,7 @@ description : Esimese nädala ülesanded
 
 *** =instructions
 
-Lahenda ülesanded
+Lahenda ülesanded:
 
 
 1. Omista arv $25 \pi$ muutujale `z`. Arv $\pi$ on R-is muutuja `pi` nime all.
