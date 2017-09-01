@@ -60,7 +60,7 @@ test_output_contains("3+4", incorrect_msg = "Oled õige vastuse valeks parandanu
 
 
 # teine
-test_output_contains("x<-7", incorrect_msg = "Omistamine läks valesti. Proovi uuesti!")
+test_object("x", incorrect_msg = "Omistamine läks valesti. Proovi uuesti!")
 success_msg("Tubli! Asu nüüd päris ülesandeid lahendama!")
 
 ```
