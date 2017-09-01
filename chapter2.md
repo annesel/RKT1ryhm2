@@ -2,6 +2,78 @@
 title       : Esimene kodutöö
 description : Esimese nädala ülesanded
 --- type:NormalExercise lang:r xp:100 skills:1 key:07547c77c0
+## Sissejuhatus
+
+Kirjuta kõigi ülesannete lahendused paremal aknapaanil olevasse *script.R* lehele, vastava ülesande sõnastuse alla. Siinses näites on esimese ülesande vastus juba kirja pandud.
+
+Ühe vastuse väljaarvutamiseks või testimiseks pane hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
+sellega saadetakse vastav rida allpool olevale R-i konsoolile täitmiseks. Konsooli käsurida võid ka kasutada: kirjuta käsk ning vajuta täitmiseks `Enter`-klahvi. Proovi siin need võimalused läbi.
+
+Lahenduse vihjete saamiseks vajuta nuppu `Take Hint`, aga sellega kaotad punkte!
+
+Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ülesanded esitanud. 
+
+
+*** =instructions
+**Prooviülesanne:**
+
+1. Liida arvud 3 ja 4.
+2. Omista väärtus 7 muutujale `x`.
+
+
+*** =hint
+- Liitmiseks kasuta märki `+` või funktsiooni `sum`
+- Omistamiseks kasuta kombinatsiooni `<-`
+
+*** =pre_exercise_code
+```{r}
+# pole midagi
+```
+
+*** =sample_code
+```{r}
+# Liida
+3 + 7
+
+
+# Omista
+ 
+
+```
+
+
+
+*** =solution
+```{r}
+# Liida
+3 + 7
+
+# Omista
+x <- 7
+
+```
+
+*** =sct
+```{r}
+# esimene
+test_output_contains("3+4", incorrect_msg = "Oled õige vastuse valeks parandanud. Proovi uuesti!")
+
+
+# teine
+test_output_contains("x<-7", incorrect_msg = "Oled õige vastuse valeks parandanud. Proovi uuesti!")
+success_msg("Tubli! Asu nüüd päris ülesandeid lahendama!")
+
+```
+
+
+
+
+
+
+
+
+
+
 ## Arvutamine ja muutujate tekitamine
 
 Kirjuta kõigi ülesannete lahendused paremal aknapaanil olevasse *script.R* lehele, vastava ülesande sõnastuse alla. 
