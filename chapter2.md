@@ -60,20 +60,15 @@ test_output_contains("3+4", incorrect_msg = "Oled õige vastuse valeks parandanu
 
 
 # teine
-test_output_contains("x<-7", incorrect_msg = "Oled õige vastuse valeks parandanud. Proovi uuesti!")
+test_output_contains("x<-7", incorrect_msg = "Omistamine läks valesti. Proovi uuesti!")
 success_msg("Tubli! Asu nüüd päris ülesandeid lahendama!")
 
 ```
 
 
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
-
-
-
-
-
-
-
+--- type:NormalExercise lang:r xp:100 skills:1 key:fe30c44601
 ## Arvutamine ja muutujate tekitamine
 
 Kirjuta kõigi ülesannete lahendused paremal aknapaanil olevasse *script.R* lehele, vastava ülesande sõnastuse alla. 
@@ -234,8 +229,5 @@ success_msg("Tubli!")
 
 
 ```
-
-
-
 
 
