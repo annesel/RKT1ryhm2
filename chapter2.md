@@ -4,13 +4,16 @@ description : Esimese nädala ülesanded
 --- type:NormalExercise lang:r xp:100 skills:1 key:07547c77c0
 ## Arvutamine ja muutujate tekitamine
 
+Kirjuta kõigi ülesannete lahendused paremal aknapaanil olevasse *skript.R* lehele, vastava ülesande sõnastuse alla. 
+Ühe vastuse väljaarvutamiseks, testimiseks pane hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
+sellega saadetakse vastav rida allpool olevale R-i konsoolile täitmiseks. Konsooli käsurida võid ka kasutada: kirjuta käsk ning vajuta täitmiseks `Enter`-klahvi.
+
+Kui **kõik** lahendused on kirjas vajuta 'Submit Answer', sellega oled ülesanded esitanud. 
+
+
 
 *** =instructions
-###Meeldetuletuseks
-* Omistamiseks kasuta märki `<-`.
-
-
-###Lahenda ülesanded:
+**Lahenda ülesanded:**
 
 1. Omista arv $25 \pi$ muutujale `z`. Arv $\pi$ on R-is muutuja `pi` nime all.
 1. Leia arvu $25 \pi$ kümnendlogaritm, kasutades muutujat `z`.
@@ -19,11 +22,6 @@ description : Esimese nädala ülesanded
 1. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$, kasutades eelnevalt defineeritud vektorit $w$.
 
 
-Kirjuta kõigi ülesannete lahendused paremal aknapaanil olevasse *skript.R* lehele, vastava ülesande sõnastuse alla. 
-Ühe vastuse väljaarvutamiseks, testimiseks pane hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
-sellega saadetakse vastav rida allpool olevale R-i konsoolile täitmiseks. Konsooli käsurida võid ka kasutada: kirjuta käsk ning vajuta täitmiseks `Enter`-klahvi.
-
-Kui **kõik** lahendused on kirjas vajuta 'Submit Answer', sellega oled ülesanded esitanud. 
 
 
 *** =hint
