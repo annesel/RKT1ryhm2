@@ -4,11 +4,14 @@ description : Esimese nädala ülesanded
 --- type:NormalExercise lang:r xp:100 skills:1 key:07547c77c0
 ## Arvutamine ja muutujate tekitamine
 
-Kirjuta kõigi ülesannete lahendused paremal aknapaanil olevasse *skript.R* lehele, vastava ülesande sõnastuse alla. 
-Ühe vastuse väljaarvutamiseks, testimiseks pane hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
+Kirjuta kõigi ülesannete lahendused paremal aknapaanil olevasse *script.R* lehele, vastava ülesande sõnastuse alla. 
+
+Ühe vastuse väljaarvutamiseks või testimiseks pane hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
 sellega saadetakse vastav rida allpool olevale R-i konsoolile täitmiseks. Konsooli käsurida võid ka kasutada: kirjuta käsk ning vajuta täitmiseks `Enter`-klahvi.
 
-Kui **kõik** lahendused on kirjas vajuta 'Submit Answer', sellega oled ülesanded esitanud. 
+Lahenduse vihjete saamiseks vajuta nuppu `Take Hint`, aga sellega kaotad võimalikke punkte!
+
+Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ülesanded esitanud. 
 
 
 
