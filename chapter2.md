@@ -1,7 +1,7 @@
 ---
 title       : Esimene kodutöö
 description : Esimese nädala ülesanded
---- type:NormalExercise lang:r xp:100 skills:1 key:07547c77c0
+--- type:NormalExercise lang:r xp:0 skills:1 key:07547c77c0
 ## Sissejuhatus
 
 Kirjuta kõigi ülesannete lahendused paremal aknapoolell olevasse *script.R* lehele, vastava ülesande sõnastuse alla. Siinses näites on esimese ülesande vastus juba kirja pandud.
