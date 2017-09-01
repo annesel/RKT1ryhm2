@@ -4,7 +4,7 @@ description : Esimese nädala ülesanded
 --- type:NormalExercise lang:r xp:100 skills:1 key:07547c77c0
 ## Sissejuhatus
 
-Kirjuta kõigi ülesannete lahendused paremal aknapaanil olevasse *script.R* lehele, vastava ülesande sõnastuse alla. Siinses näites on esimese ülesande vastus juba kirja pandud.
+Kirjuta kõigi ülesannete lahendused paremal aknapoolell olevasse *script.R* lehele, vastava ülesande sõnastuse alla. Siinses näites on esimese ülesande vastus juba kirja pandud.
 
 Ühe vastuse väljaarvutamiseks või testimiseks pane hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
 sellega saadetakse vastav rida allpool olevale R-i konsoolile täitmiseks. Konsooli käsurida võid ka kasutada: kirjuta käsk ning vajuta täitmiseks `Enter`-klahvi. Proovi siin need võimalused läbi.
@@ -33,7 +33,7 @@ Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ü
 *** =sample_code
 ```{r}
 # Liida
-3 + 7
+3 + 4
 
 
 # Omista
