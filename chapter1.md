@@ -142,7 +142,7 @@ test_function_result(name = "sqrt",
                      incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
 
 
-ex() %>% check_operator("+") %>% check_result() %>% check_equal()
+#ex() %>% check_operator("+") %>% check_result() %>% check_equal()
 
 #check_operator(name = "+",
 #                     index = 1,
