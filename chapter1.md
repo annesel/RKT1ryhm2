@@ -84,7 +84,6 @@ ja paar funktsiooni:
 
 - Siinus: `sin()`
 - Naturaallogaritm: `log()`
-- Ruutjuur `sqrt()`
 - Eksponentfunkstioon `exp()`
 
 
@@ -134,12 +133,12 @@ ja paar funktsiooni:
 *** =sct
 ```{r}
 # Ül 1
-test_function_result(name = "sqrt",
-                     index = 1,
-                     eq_condition = "equivalent",
-                     not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
-                     error_msg = "Esimeses ülesandes on midagi valesti!",
-                     incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
+#test_function_result(name = "sqrt",
+#                     index = 1,
+#                     eq_condition = "equivalent",
+#                     not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
+#                     error_msg = "Esimeses ülesandes on midagi valesti!",
+#                     incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
 
 test_function(name = "sqrt", args = "x",
                      index = 2,
