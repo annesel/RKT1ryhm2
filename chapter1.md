@@ -134,20 +134,30 @@ ja paar funktsiooni:
 *** =sct
 ```{r}
 # Ül 1
-test_function_result(name = "sqrt",
+#test_function_result(name = "sqrt",
+#                     index = 2,
+#                     eq_condition = "equivalent",
+#                     not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
+#                     error_msg = "Esimeses ülesandes on midagi valesti!",
+#                     incorrect_msg = "Oled esimeses funktsioonile `sqrt` andnud vale väärtusega argumendi")
+
+#check_operator(state, name, index = 1, append = TRUE, not_called_msg = NULL)
+
+test_function(name = "sqrt",
                      index = 2,
                      eq_condition = "equivalent",
                      not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
-                     error_msg = "Esimeses ülesandes on midagi valesti!",
+                     args_not_specified_msg = "Funktsioonile `sqrt` pole antud argumendi väärtust.",
                      incorrect_msg = "Oled esimeses funktsioonile `sqrt` andnud vale väärtusega argumendi")
 
-
-#check_operator(state, name, index = 1, append = TRUE, not_called_msg = NULL)
 
 
 test_output_contains(expr = "(sqrt(3) + 4) / 5",
                     times = 1,
                     incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
+ 
+ 
+ 
  
  
  
@@ -164,7 +174,6 @@ test_function_result(name = "sqrt",
                      not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `sqrt`",
                      error_msg = "Komandas ülesandes on midagi valesti!",
                      incorrect_msg = "Oled kolmandas ülesandes funktsioonile `sqrt` andnud vale väärtusega argumendi")
-
 
 test_output_contains(expr = "(sqrt(3) + 4) / 55",
                      times = 1,
