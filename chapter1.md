@@ -7,11 +7,11 @@ description : Esimene teema - kalkulaator, omistamine
 Kirjuta kõigi ülesannete lahendused paremal aknapoolel olevasse *script.R* lehele, vastava ülesande sõnastuse alla. Siinses näites on esimese ülesande lahendus juba kirja pandud.
 
 Ühe vastuse väljaarvutamiseks või testimiseks pane hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
-sellega saadetakse vastav rida allpool olevale R-i konsoolile täitmiseks. Konsooli käsurida võid ka kasutada: kirjuta käsk ning vajuta täitmiseks `Enter`-klahvi. Proovi siin need võimalused läbi.
+sellega saadetakse vastav rida allpool olevale R-i konsoolile täitmiseks. Konsooli käsurida võid ka kasutada: kirjuta käsk ning vajuta täitmiseks `Enter`-klahvi. Proovi siin ülesandes need võimalused läbi.
 
-Lahenduse vihjete saamiseks vajuta nuppu `Take Hint`, aga sellega kaotad võimalikke punkte!
+Lahenduse vihjete saamiseks vajuta nuppu `Take Hint`, aga sellega kaotad võimalikke punkte! Kui oled lahti teinud vihjed, siis võid edasi avada ka kogu lahenduse koodi, kuid nii toimides lähevad ülesande punktid nulli.
 
-Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ülesanded esitanud. 
+Oma vastuse esitamiseks vajuta `Submit Answer`-nuppu, siis saadetakse ülesanded kontrollimiseks. Vajuta seda nuppu siis kui oled kirja pannud **kõik** selle lehekülje ülesannete vastused.
 
 
 *** =instructions
@@ -92,9 +92,10 @@ ja paar funktsiooni:
 *** =instructions
 **Leia vastused järgmisetele tehetele:**
 
+1. $25 - 1/4  + 5/9$
 1. $ (\sqrt{3} + 4) / 5 $
-2. $ (245 - 3^6)^2 $
-3. $ \frac{\sqrt{3} + 4}{55}$
+1. $ (245 - 3^6)^2 $
+1. $ \frac{\sqrt{3} + 4}{55}$
 
 
 *** =hint
@@ -115,17 +116,23 @@ ja paar funktsiooni:
 # Ülesanne 3
 
 
+# Ülesanne 4
+
+
 ```
 
 *** =solution
 ```{r}
 # Ülesanne 1
-(sqrt(3) + 4) / 5
+25 - 1/4  + 5/9
 
 # Ülesanne 2
-(245 - 3^6)^2 
+(sqrt(3) + 4) / 5
 
 # Ülesanne 3
+(245 - 3^6)^2 
+
+# Ülesanne 4
 (sqrt(3) + 4) / 55
 
 
@@ -133,7 +140,7 @@ ja paar funktsiooni:
 
 *** =sct
 ```{r}
-# Ül 1
+# Ül 2
 #test_function_result(name = "sqrt",
 #                     index = 2,
 #                     eq_condition = "equivalent",
@@ -154,16 +161,21 @@ ja paar funktsiooni:
 #                    incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
  
  
-# Ül 1
+#Ü1 1
+test_output_contains(expr = "25 - 1/4  + 5/9 ",
+                    times = 1,
+                    incorrect_msg = "Midagi on esimeses ülesandes valesti! Kontrolli tehete järjekorda ja tehtemärke.")
+ 
+# Ül 2
 test_output_contains(expr = "(sqrt(3) + 4) / 5",
                     times = 1,
-                    incorrect_msg = "Midagi on esimeses ülesandes valesti! Kontrolli tehete järjekorda. Ruutjuure leidmiseks kasuta `sqrt(3)`.")
-# ÜL 2
+                    incorrect_msg = "Midagi on teises ülesandes valesti! Kontrolli tehete järjekorda. Ruutjuure leidmiseks kasuta `sqrt(3)`.")
+# ÜL 3
 test_output_contains(expr = "(245 - 3^6)^2 ",
                      times = 1,
-                     incorrect_msg = "Midagi on teises ülesandes valesti! Kontrolli tehete järjekorda. Astendamiseks kasuta märki `^` või `**`.")
+                     incorrect_msg = "Midagi on komandas ülesandes valesti! Kontrolli tehete järjekorda. Astendamiseks kasuta märki `^` või `**`.")
  
-# Ül 3
+# Ül 4
 test_output_contains(expr = "(sqrt(3) + 4) / 55",
                      times = 1,
                      incorrect_msg = "Midagi on viimases ülesandes valesti! Kontrolli tehete järjekorda. Ruutjuure leidmiseks kasuta `sqrt(3)`.")
@@ -360,8 +372,9 @@ success_msg("Tubli!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc9440a76a
-## Muutujad 
- Muutujad võivad olla ka tekstilised. Näiteks `x <- "Tere maailm!"` omistab muutujale `x` väärtuseks teksti `Tere maailm!`.
+## Tekstiväärtusega muutujad
+
+Muutujad võivad olla ka tekstilised. Näiteks `x <- "Tere maailm!"` omistab muutujale `x` väärtuseks teksti `Tere maailm!`.
 Tekstiväärtustega arvutustehteid teha ei saa, küll aga saab tekste omavahel ühendada funktsiooni `paste()` abil.
 
 
