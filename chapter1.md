@@ -151,9 +151,9 @@ test_function_result(name = "sqrt",
 #check_operator(state, name, index = 1, append = TRUE, not_called_msg = NULL)
 
 
-test_output_contains(expr = "(sqrt(3) + 4) / 5",
-                     times = 1,
-                     incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
+#test_output_contains(expr = "(sqrt(3) + 4) / 5",
+ #                    times = 1,
+ #                    incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
  
  
  
