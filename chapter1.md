@@ -176,16 +176,9 @@ success_msg("Hästi! Mine edasi järgmise ülesande juurde.")
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:fe30c44601
-## Arvutamine ja muutujate tekitamine
+## Muutujate tekitamine ja kasutamine
 
-Kirjuta kõigi ülesannete lahendused paremal aknapaanil olevasse *script.R* lehele, vastava ülesande sõnastuse alla. 
-
-Ühe vastuse väljaarvutamiseks või testimiseks pane hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
-sellega saadetakse vastav rida allpool olevale R-i konsoolile täitmiseks. Konsooli käsurida võid ka kasutada: kirjuta käsk ning vajuta täitmiseks `Enter`-klahvi.
-
-Lahenduse vihjete saamiseks vajuta nuppu `Take Hint`, aga sellega kaotad võimalikke punkte!
-
-Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ülesanded esitanud. 
+R-is võivad muutujate nimed sisaldada suuri ja väikesi tähti, numbreid, punkti ja alakriipsu. Erandiks on see, et nimi ei või alata numbri või alakriipsuga. Näiteks saab omistada `x`-le väärtuse 3 järgmiselt: `x <- 3`. 
 
 
 
@@ -195,7 +188,7 @@ Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ü
 1. Omista arv $25 \pi$ muutujale `z`. Arv $\pi$ on R-is muutuja `pi` nime all.
 1. Leia arvu $25 \pi$ kümnendlogaritm, kasutades muutujat `z`.
 1. Leia arvu $25 \pi$ naturaallogaritm, kasutades muutujat `z`.
-1. Arvuta tehte $25 \pi + \frac{1}{25 \pi} - 2^{\frac{25\pi}{20}}$ vastus , aksutades muutujat `z`.
+1. Arvuta tehte $25 \pi + \frac{1}{25 \pi} - 2^{\frac{25\pi}{20}}$ vastus , kasutades muutujat `z`.
 1. Moodusta vektor `w`, milles on arvud $1, 2, \ldots, 250$.
 1. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$, kasutades eelnevalt defineeritud vektorit $w$.
 
@@ -357,16 +350,304 @@ success_msg("Tubli!")
 ```
 
 
-
-
-
-
-
+<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 
 
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 <!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:bc9440a76a
+## Muutujad 
+ Muutujad võivad olla ka tekstilised. Näiteks `x <- "Tere maailm!"` omistab muutujale `x` väärtuseks teksti `Tere maailm!`.
+Tekstiväärtustega arvutustehteid teha ei saa, küll aga saab tekste omavahel ühendada funktsiooni `paste()` abil.
+
+
+
+*** =instructions
+- Proovi läbi näited 1 ja 2.
+- Täida ka näite 3 käsud ja vaata, millise veateate annab R. Kas saad aru milles on viga?
+- **Ülesanne:** paranda näite 3 koodi nii, et liitmisel tuleks vastuseks arv ning punast veateadet ei ilmuks.
+
+
+*** =hint
+Veendu, et oled muutnud koodi nii, et muutujale `poisse` omistatakse arvuline väärtus `3`: `poisse <- 3` ning muutujale `tydrukuid` arvuline väärtus 2: `tydrukuid <- 2`. 
+
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+# Näide 1: omistame muutujale `x` väärtuseks  teksti "Tere maailm!" ja väljastame selle
+x <- "Tere maailm!"
+x
+
+# Näide 2: tekstide ühendamine, eri võimalusi
+poisse <- "kolm"
+tydrukuid <- "2"
+paste(poisse, "ja", tydrukuid)
+paste(poisse, tydrukuid)
+paste(poisse, tydrukuid, sep = "")
+
+# Näide 3: tekste ei saa liita, tulemuseks on veateade.
+poisse <- "kolm"
+tydrukuid <- "2"
+lapsi <- poisse + tydrukuid
+```
+
+*** =solution
+```{r}
+# Näide 1: omistame muutujale `x` väärtuseks  teksti "Tere maailm!" ja väljastame selle
+x <- "Tere maailm!"
+x
+
+# Näide 2: tekstide ühendamine, eri võimalusi
+poisse <- "kolm"
+tydrukuid <- "2"
+paste(poisse, "ja", tydrukuid)
+paste(poisse, tydrukuid)
+paste(poisse, tydrukuid, sep = "")
+
+# Näide 3: tekste ei saa liita, tulemuseks on veateade.
+poisse <- 3
+tydrukuid <- 2
+lapsi <- poisse + tydrukuid
+```
+
+*** =sct
+```{r}
+test_object("poisse", incorrect_msg = "Kontrolli, kas omistad muutujale `poisse` arvu 3.")
+test_object("tydrukuid", incorrect_msg = "Kontrolli, kas omistad muutujale `tydrukuid` arvu 2.")
+
+msg <- "Kas kasutasid omistmiskäsku `lapsi <- poisse + tydrukuid`?"
+test_object("lapsi", undefined_msg = msg, incorrect_msg = msg)
+success_msg("Hästi tehtud! Suundu järgmise harjutuse juurde!")
+
+```
+
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:fead53a9da
+## Vektorid 1
+
+- Üksikuid arve või tekstiväärtusi saab kokku panna vektoriks funktsiooni `c()` (*combine*) abil. 
+- Veel võimalusi vektorite moodustamiseks:
+    * `1:5                 # arvujada 1, 2, 3, 4, 5`
+    * `rep(1:5, times = 2)     # vektorit elementidega 1, 2, 3, 4, 5 korrata 2 korda`
+    * `seq(2, 8, by = 2)   # arvujada sammuga 2: 2, 4, 6, 8`
+
+
+*** =instructions
+- Tee läbi näited 1 kuni 3.
+- **Ülesanne 1.** Kasutades operaatorit `:` moodusta vektor nimega `jada1`, mille elemendid on `5, 4, 3, 2, 1`. Väljasta tulemus ekraanile.
+- **Ülesanne 2.** Kasutades funkstiooni `rep` moodusta vektor nimega `jada2`, mille elemendid on `"Ruhnu", "Kihnu", "Ruhnu", "Kihnu", "Ruhnu", "Kihnu"`. Väljasta tulemus ekraanile.
+
+
+*** =hint
+- Kasuta teises ülesandes funktsiooni `rep` esimese argumendina vektorit  `c("Ruhnu", "Kihnu")`.
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+# Näide 1: Moodustame 2 vektorit, millest ühes on kirjas temperatuurid (20.01.2010 kell 10), teises jaamad, kus need on mõõdetud :
+temp <- c(-6.2, -12.9, -13.0, -15.4, -16.1, -16.9, -17.0, -19.6, -19.9)
+jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "Võru", "Jõgeva")            # NB! Kui jutumärgid unustada, otsib R vastava nimega objekte!
+
+# Näide 2: Väljastame tulemused 
+temp; jaam
+
+# Näide 3:  Tehted tehakse läbi kõigi vektori elementidega. Teisendame celsiuse skaalalt fahrenheiti skaalale
+Fahrenheit <- temp*9/5+32
+Fahrenheit 
+
+# Ülesanne 1. Asenda alakriipsud õigete väärtustega
+jada1 <- __:__
+jada1
+
+# Ülesanne 2.  Asenda alakriipsud vajalike suurustega
+jada2 <- rep(c(_____,_____), times = __)
+jada2
+
+```
+
+*** =solution
+```{r}
+# Näide 1: Moodustame 2 vektorit, millest ühes on kirjas temperatuurid (20.01.2010 kell 10), teises jaamad, kus need on mõõdetud :
+temp <- c(-6.2, -12.9, -13.0, -15.4, -16.1, -16.9, -17.0, -19.6, -19.9)
+jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "Võru", "Jõgeva")            # NB! Kui jutumärgid unustada, otsib R vastava nimega objekte!
+
+# Näide 2: Väljastame tulemused 
+temp; jaam
+
+# Näide 3:  Tehted tehakse läbi kõigi vektori elementidega. Teisendame celsiuse skaalalt fahrenheiti skaalale
+Fahrenheit <- temp*9/5+32
+Fahrenheit 
+
+# Ülesanne 1. Asenda alakriipsud õigete väärtustega
+jada1 <- 5:1
+jada1
+
+# Ülesanne 2.  Asenda alakriipsud vajalike suurustega
+jada2 <- rep(c("Ruhnu", "Kihnu"), times = 3)
+jada2
+```
+
+*** =sct
+```{r}
+test_object("jada1", incorrect_msg= "Kas kasutasid `jada1` defineerimiseks käsku `5:1`?")
+test_object("jada2", undefined_msg = NULL, incorrect_msg = "Muutuja `jada2` on defineeritud valesti. Proovi veel!")
+success_msg("Super!")
+
+```
+
+
+
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:dd8c92ca90
+## ## Vektorid 2
+
+Väga sageli on tarvis vektorist kätte saada meile hetkel vajalikku alamosa. Vaatame paari võimalust vektorist elementide välja noppimiseks. 
+
+
+
+
+*** =instructions
+ - Tee  näited 1 kuni 3  ükshaaval läbi ja uuri tulemust.
+ - **Ülesanne:** vali välja jaamad, kus temperatuur on olnud -17 või alla selle. Kasuta tingimuse kirjapanekul märki $\leq$.
+
+*** =hint
+- Märgi $\leq$ moodustamiseks kombineeri `<` ja `=` märke:  `<=`.
+
+*** =pre_exercise_code
+```{r}
+temp <- c(-6.2, -12.9, -13.0, -15.4, -16.1, -16.9, -17.0, -19.6, -19.9)
+jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "Võru", "Jõgeva")          
+```
+
+*** =sample_code
+```{r}
+# Näide 1
+temp[ 1 ] # vektori esimene element
+temp[ -1 ] # vektori kõik elemendid va esimene
+temp[ c(1, 5, 9) ] # vektori esimene, viies ja üheksas element
+
+# Näide 2. Tulemuseks tõeväärtustega vektorid 
+temp < -15 # Kontrollime millised temperatuurid jäävad alla -15 kraadi. 
+jaam == "Tallinn"  # Mitmes jaam on Tallinn?
+
+# Näide 3. Tingimustele vastavate elementide väljavalimine
+jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
+temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
+
+# Ülesanne: asenda alakriipsud õige käsuga
+vastus <- ________
+vastus
+```
+
+*** =solution
+```{r}
+# Näide 1
+temp[ 1 ] # vektori esimene element
+temp[ -1 ] # vektori kõik elemendid va esimene
+temp[ c(1, 5, 9) ] # vektori esimene, viies ja üheksas element
+
+# Näide 2. Tulemuseks tõeväärtustega vektorid 
+temp < -15 # Kontrollime millised temperatuurid jäävad alla -15 kraadi. 
+jaam == "Tallinn"  # Mitmes jaam on Tallinn?
+
+# Näide 3. Tingimustele vastavate elementide väljavalimine
+jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
+temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
+
+# Ülesanne: asenda alakriipsud õige käsuga
+vastus <- jaam[temp <= -17]
+vastus
+```
+
+*** =sct
+```{r}
+test_object("vastus", undefined_msg = NULL, incorrect_msg = "Kas kasutasid käsku `jaam[temp <= -17]`?")
+success_msg("Tubli töö! Jätka samas vaimus!")
+```
+
+
+
+--- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:a1ac08c1e6
+## Test 1. Küsimus 1.
+
+Muutja `k` väärtuseks on `"kuusteist"` ja muutuja `m` väärtuseks on `4`. Millega võrdub `n <- k + m` väärtus? 
+
+*** =instructions
+
+- `"kakskümmend"`
+- `20`
+- tuleb veateade `Viga! Proovi veel!`
+- tuleb veateade `Error: non-numeric argument to binary operator`
+
+*** =hint
+Vaata veelkord harjutust **Muutujad 2**.
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sct
+```{r}
+# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
+
+msg_bad <- "See pole õige vastus!"
+msg_success <- "Täpselt! R ütleb, et proovid teha liitmistehet tekstiga."
+test_mc(correct = 4, feedback_msgs = c(msg_bad,  msg_bad, msg_bad, msg_success))
+```
+
+
+--- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:191cdeba71
+## Test 1. Küsimus 2.
+
+Loo vektor `esimene` elementidega 21-st kuni 60-ni sammuga 3 (vektori pikkus peab olema 14 elementi) ja teine vektor nimega `teine`, mille väärtused on `8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9, 8, 9` . 
+Vektorile `tulemus` omista väärtuseks nende vektorite vahe.
+
+Millised vektori `tulemus` elemendid jaguvad 5-ga täpselt?
+
+
+*** =instructions
+
+
+- 2., 5. ja 12. element
+- Kõik elemendid jaguvad 5-ga
+- Ükski ei jagu
+- 3. ja 6. element
+
+*** =hint
+Vaata veelkord harjutusi **R kui kalkulaator** (jäägi leidmine) ja **Muutujad 2** (vektorite moodustamine).
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sct
+```{r}
+# SCT written with testwhat: https://github.com/datacamp/testwhat/wiki
+
+msg_bad <- "See pole õige vastus!"
+msg_success <- "Täpselt nii!"
+test_mc(correct = 1, feedback_msgs = c(msg_success, msg_bad,  msg_bad, msg_bad))
+```
 
 
