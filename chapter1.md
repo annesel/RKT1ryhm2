@@ -145,12 +145,9 @@ test_function_result(name = "sqrt",
 
 check_operator(name = "+",
                      index = 1,
-                     eq_condition = "equivalent",
-                     not_called_msg = "Esimeses ülesandes pead kasutama liitmist: `+`",
-                     error_msg = "Esimeses ülesandes on midagi valesti!",
-                     incorrect_msg = "Oled liitnud valed arvud.")
+                     not_called_msg = "Esimeses ülesandes pead kasutama liitmist: `+`")
 
-
+#check_operator(state, name, index = 1, append = TRUE, not_called_msg = NULL)
 
 
 test_output_contains(expr = "(sqrt(3) + 4) / 5",
