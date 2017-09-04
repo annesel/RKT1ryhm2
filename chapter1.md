@@ -143,7 +143,7 @@ test_function_result(name = "sqrt",
                      error_msg = "Esimeses ülesandes on midagi valesti!",
                      incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
 
-test_function_result(name = "+",
+check_operator(name = "+",
                      index = 1,
                      eq_condition = "equivalent",
                      not_called_msg = "Esimeses ülesandes pead kasutama liitmist: `+`",
