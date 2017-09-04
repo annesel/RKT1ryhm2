@@ -141,29 +141,13 @@ test_function_result(name = "sqrt",
                      error_msg = "Esimeses ülesandes on midagi valesti!",
                      incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
 
-#test_function(name = "sqrt", args = "x",
-#                     index = 1,
-#                     eq_condition = "equivalent",
-#                     not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
-#                     args_not_specified_msg = "Vale argument funktsioonil `sqrt`",
-#                     incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
-
-
- 
-
-
-#ex() %>% check_operator("+") %>% check_result() %>% check_equal()
-
-#check_operator(name = "+",
-#                     index = 1,
-#                     not_called_msg = "Esimeses ülesandes pead kasutama liitmist: `+`")
 
 #check_operator(state, name, index = 1, append = TRUE, not_called_msg = NULL)
 
 
-#test_output_contains(expr = "(sqrt(3) + 4) / 5",
- #                    times = 1,
- #                    incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
+test_output_contains(expr = "(sqrt(3) + 4) / 5",
+                    times = 1,
+                    incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
  
  
  
