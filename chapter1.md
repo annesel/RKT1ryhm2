@@ -153,22 +153,22 @@ ex() %>% check_operator("+") %>% check_result() %>% check_equal()
 #check_operator(state, name, index = 1, append = TRUE, not_called_msg = NULL)
 
 
-test_output_contains(expr = "(sqrt(3) + 4) / 5",
-                     times = 1,
-                     incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
+#test_output_contains(expr = "(sqrt(3) + 4) / 5",
+#                     times = 1,
+#                     incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
  
  
  
 # ÜL 2
 test_output_contains(expr = "(245 - 3^6)^2 ",
                      times = 1,
-                     incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
+                     incorrect_msg = "Midagi läks valesti! Kontrolli teise ülesande vastust.")
  
  
 # Ül 3
 test_output_contains(expr = "(sqrt(3) + 4) / 5",
                      times = 1,
-                     incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
+                     incorrect_msg = "Midagi läks valesti! Kontrolli kolmanda ülesande vastust.")
  
  
 
