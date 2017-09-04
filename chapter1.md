@@ -120,7 +120,7 @@ ja paar funktsiooni:
 *** =solution
 ```{r}
 # Ülesanne 1
-sqrt((sqrt(3) + 4) / 5)
+(sqrt(3) + 4) / 5
 
 # Ülesanne 2
 (245 - 3^6)^2 
