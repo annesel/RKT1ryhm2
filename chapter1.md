@@ -142,7 +142,7 @@ test_function_result(name = "sqrt",
                      incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
 
 test_function(name = "sqrt", args = "x",
-                     index = 0,
+                     index = 2,
                      eq_condition = "equivalent",
                      not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
                      args_not_specified_msg = "Vale argument funktsioonil `sqrt`",
