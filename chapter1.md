@@ -141,7 +141,7 @@ test_function_result(name = "sqrt",
                      error_msg = "Esimeses ülesandes on midagi valesti!",
                      incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
 
-test_function(name = "sqrt", args = "x,
+test_function(name = "sqrt", args = "x",
                      index = 1,
                      eq_condition = "equivalent",
                      not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
