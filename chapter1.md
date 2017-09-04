@@ -71,7 +71,9 @@ success_msg("Tubli! Asu nüüd päris ülesandeid lahendama!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:0f25fc4161
 ## Arvutamine
 
-Esmalt mõned lihtsad arvutusülesanded. Meeldetuletuseks tehtemärgid:
+Esmalt mõned lihtsad arvutusülesanded. 
+
+Meeldetuletuseks tehtemärgid:
 
 - Liitmine: `+`
 - Lahutamine: `-`
@@ -85,10 +87,16 @@ ja paar funktsiooni:
 - Siinus: `sin()`
 - Naturaallogaritm: `log()`
 - Ruutjuur `sqrt()`
+- Eksponentfunkstioon `exp()`
 
 
 
 *** =instructions
+**Lahenda ülesanded:**
+
+1. $ (\sqrt(3) + 4) / 5 $
+2. $ (245 - 3^6)^2 $
+3. $ \frac{\sqrt(3) + 4}{5}$
 
 
 *** =hint
@@ -100,16 +108,52 @@ ja paar funktsiooni:
 
 *** =sample_code
 ```{r}
+# Ülesanne 1
+
+
+# Ülesanne 2
+
+
+# Ülesanne 3
+
 
 ```
 
 *** =solution
 ```{r}
+# Ülesanne 1
+(sqrt(3) + 4) / 5
+
+# Ülesanne 2
+(245 - 3^6)^2 
+
+# Ülesanne 3
+(sqrt(3) + 4) / 5
+
 
 ```
 
 *** =sct
 ```{r}
+# Ül 1
+test_output_contains(expr = "(sqrt(3) + 4) / 5",
+                     times = 1,
+                     incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
+ 
+ 
+ 
+# ÜL 2
+test_output_contains(expr = "(245 - 3^6)^2 ",
+                     times = 1,
+                     incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
+ 
+ 
+# Ül 3
+test_output_contains(expr = "(sqrt(3) + 4) / 5",
+                     times = 1,
+                     incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
+ 
+ 
 
 ```
 
