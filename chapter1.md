@@ -37,8 +37,6 @@ Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ü
 
 
 # Omista
- 
-
 ```
 
 
