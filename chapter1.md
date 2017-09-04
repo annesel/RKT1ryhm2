@@ -139,7 +139,7 @@ test_function_result(name = "sqrt",
                      eq_condition = "equivalent",
                      not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
                      error_msg = "Esimeses ülesandes on midagi valesti!",
-                     incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
+                     incorrect_msg = "Oled esimeses funktsioonile `sqrt` andnud vale väärtusega argumendi")
 
 
 #check_operator(state, name, index = 1, append = TRUE, not_called_msg = NULL)
@@ -158,6 +158,14 @@ test_output_contains(expr = "(245 - 3^6)^2 ",
  
  
 # Ül 3
+test_function_result(name = "sqrt",
+                     index = 2,
+                     eq_condition = "equivalent",
+                     not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `sqrt`",
+                     error_msg = "Komandas ülesandes on midagi valesti!",
+                     incorrect_msg = "Oled kolmandas ülesandes funktsioonile `sqrt` andnud vale väärtusega argumendi")
+
+
 test_output_contains(expr = "(sqrt(3) + 4) / 55",
                      times = 1,
                      incorrect_msg = "Midagi läks valesti! Kontrolli kolmanda ülesande vastust.")
