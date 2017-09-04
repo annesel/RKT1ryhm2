@@ -144,7 +144,7 @@ ja paar funktsiooni:
 #check_operator(state, name, index = 1, append = TRUE, not_called_msg = NULL)
 
 test_function(name = "sqrt",
-                     index = 2,
+                     index = 1,
                      eq_condition = "equivalent",
                      not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
                      args_not_specified_msg = "Funktsioonile `sqrt` pole antud argumendi väärtust.",
@@ -169,7 +169,7 @@ test_output_contains(expr = "(245 - 3^6)^2 ",
  
 # Ül 3
 test_function_result(name = "sqrt",
-                     index = 3,
+                     index = 2,
                      eq_condition = "equivalent",
                      not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `sqrt`",
                      error_msg = "Komandas ülesandes on midagi valesti!",
