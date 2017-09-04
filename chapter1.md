@@ -1,21 +1,21 @@
 ---
-title       : Esimene kodutöö
-description : Esimese nädala ülesanded
---- type:NormalExercise lang:r xp:50 skills:1 key:07547c77c0
+title       : Esimene kodutöö - osa 1
+description : Esimene teema - kalkulaator, omistamine
+--- type:NormalExercise lang:r xp:0 skills:1 key:07547c77c0
 ## Sissejuhatus
 
-Kirjuta kõigi ülesannete lahendused paremal aknapoolell olevasse *script.R* lehele, vastava ülesande sõnastuse alla. Siinses näites on esimese ülesande vastus juba kirja pandud.
+Kirjuta kõigi ülesannete lahendused paremal aknapoolel olevasse *script.R* lehele, vastava ülesande sõnastuse alla. Siinses näites on esimese ülesande lahendus juba kirja pandud.
 
 Ühe vastuse väljaarvutamiseks või testimiseks pane hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
 sellega saadetakse vastav rida allpool olevale R-i konsoolile täitmiseks. Konsooli käsurida võid ka kasutada: kirjuta käsk ning vajuta täitmiseks `Enter`-klahvi. Proovi siin need võimalused läbi.
 
-Lahenduse vihjete saamiseks vajuta nuppu `Take Hint`, aga sellega kaotad punkte!
+Lahenduse vihjete saamiseks vajuta nuppu `Take Hint`, aga sellega kaotad võimalikke punkte!
 
 Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ülesanded esitanud. 
 
 
 *** =instructions
-**Prooviülesanne:**
+**Prooviülesanne (0 punkti):**
 
 1. Liida arvud 3 ja 4.
 2. Omista väärtus 7 muutujale `x`.
@@ -60,13 +60,13 @@ test_output_contains("3+4", incorrect_msg = "Oled esimeses ülesandes õige vast
 
 
 # teine
-test_object("x", incorrect_msg = "Omistamine läks valesti. Proovi uuesti!")
+test_object("x",  undefined_msg = "Vali muutuja nimeks `x`.",  incorrect_msg = "Omistasid muutujale vale väärtuse. Proovi uuesti!")
 success_msg("Tubli! Asu nüüd päris ülesandeid lahendama!")
 
 ```
 
 
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:fe30c44601
 ## Arvutamine ja muutujate tekitamine
@@ -88,6 +88,7 @@ Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ü
 1. Omista arv $25 \pi$ muutujale `z`. Arv $\pi$ on R-is muutuja `pi` nime all.
 1. Leia arvu $25 \pi$ kümnendlogaritm, kasutades muutujat `z`.
 1. Leia arvu $25 \pi$ naturaallogaritm, kasutades muutujat `z`.
+1. Arvuta tehte $25 \pi + \frac{1}{25 \pi} - 2^{\frac{25\pi}{20}}$ vastus , aksutades muutujat `z`.
 1. Moodusta vektor `w`, milles on arvud $1, 2, \ldots, 250$.
 1. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$, kasutades eelnevalt defineeritud vektorit $w$.
 
@@ -96,6 +97,7 @@ Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ü
 
 *** =hint
 - Logaritmifunktsiooni abilehe saad avada kui kirjutad konsoolile `?log` ja vajutad enter-klahvi.
+- Kui sul tekkisid probleemid astendamismärgi `^` leidmisega, siis kasuta selle asemel `**`. 
 - Väärtuseid  $1, 2, \ldots, 250$, sisaldava vektori moodustamiseks kasuta operaatorit `:` või käsku `seq`.
 - Viimases ülesandes kasuta `sum` käsku.
 
@@ -113,6 +115,9 @@ Kui **kõik** lahendused on kirjas vajuta `Submit Answer`-nuppu, sellega oled ü
 
 
 # Leia muutuja z naturaallogaritm
+
+
+# Leia tehte vastus, kasutades muuutujat z
 
 
 # Moodusta vektor w, milles on arvud 1, 2, ..., 250
@@ -135,6 +140,10 @@ log10(z)
 
 # Leia muutuja z naturaallogaritm
 log(z)
+
+# Leia tehte vastus
+z + 1/z - 2^(z/20)
+
 
 # Moodusta vektor w, milles on arvud 1, 2, ..., 250
 w <- 1:250
@@ -192,6 +201,19 @@ test_output_contains(expr = "log(z)",
  
  
   
+  
+# neljas
+msg_undefinedz = "Kontrolli, kas oled defineerinud muutuja `z`."
+msg_incorrectz = "Kontrolli, kas oled muutujale `z` omistanud õige väärtuse."
+test_object("z",  
+            undefined_msg = msg_undefinedz,
+            incorrect_msg = msg_incorrectz) 
+test_output_contains(expr = "z + 1/z - 2^(z/20)",
+                     times = 1,
+                     incorrect_msg = "Midagi läks valesti! Kontrolli neljanda ülesande tehte kirjapanekut.")
+ 
+ 
+
   
   
   
