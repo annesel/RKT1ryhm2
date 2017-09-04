@@ -90,7 +90,7 @@ ja paar funktsiooni:
 
 
 *** =instructions
-**Leia vastused järgmisetele tehetele:**
+**Leia vastused järgmistele tehetele:**
 
 1. $25 - 1/4  + 5/9$
 1. $ (\sqrt{3} + 4) / 5 $
