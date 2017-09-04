@@ -135,7 +135,7 @@ ja paar funktsiooni:
 ```{r}
 # Ül 1
 test_function_result(name = "sqrt",
-                     index = 1,
+                     index = 2,
                      eq_condition = "equivalent",
                      not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
                      error_msg = "Esimeses ülesandes on midagi valesti!",
