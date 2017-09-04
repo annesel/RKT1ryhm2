@@ -169,7 +169,7 @@ test_output_contains(expr = "(245 - 3^6)^2 ",
  
 # Ül 3
 test_function_result(name = "sqrt",
-                     index = 2,
+                     index = 3,
                      eq_condition = "equivalent",
                      not_called_msg = "Kolmandas ülesandes pead kasutama funktsiooni `sqrt`",
                      error_msg = "Komandas ülesandes on midagi valesti!",
