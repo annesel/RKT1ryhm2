@@ -68,6 +68,53 @@ success_msg("Tubli! Asu nüüd päris ülesandeid lahendama!")
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
+--- type:NormalExercise lang:r xp:100 skills:1 key:0f25fc4161
+## Arvutamine
+
+Esmalt mõned lihtsad arvutusülesanded. Meeldetuletuseks tehtemärgid:
+
+- Liitmine: `+`
+- Lahutamine: `-`
+- Korrutamine: `*`
+- Jagamine: `/`
+- Astendamine: `^` või `**`
+- Jääk jagamisel: `%%`
+
+ja paar funktsiooni:
+
+- Siinus: `sin()`
+- Naturaallogaritm: `log()`
+- Ruutjuur `sqrt()`
+
+
+
+*** =instructions
+
+
+*** =hint
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+
+```
+
+*** =solution
+```{r}
+
+```
+
+*** =sct
+```{r}
+
+```
+
+<!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
 --- type:NormalExercise lang:r xp:100 skills:1 key:fe30c44601
 ## Arvutamine ja muutujate tekitamine
 
