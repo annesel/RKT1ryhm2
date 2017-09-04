@@ -92,11 +92,11 @@ ja paar funktsiooni:
 
 
 *** =instructions
-**Lahenda ülesanded:**
+**Leia vastused järgmisetele tehetele:**
 
-1. $ (\sqrt(3) + 4) / 5 $
+1. $ (\sqrt{3} + 4) / 5 $
 2. $ (245 - 3^6)^2 $
-3. $ \frac{\sqrt(3) + 4}{5}$
+3. $ \frac{\sqrt{3} + 4}{5}$
 
 
 *** =hint
@@ -136,6 +136,23 @@ ja paar funktsiooni:
 *** =sct
 ```{r}
 # Ül 1
+test_function_result(name = "sqrt",
+                     index = 1,
+                     eq_condition = "equivalent",
+                     not_called_msg = "Esimeses ülesandes pead kasutama funktsiooni `sqrt`",
+                     error_msg = "Esimeses ülesandes on midagi valesti!",
+                     incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
+
+test_function_result(name = "+",
+                     index = 1,
+                     eq_condition = "equivalent",
+                     not_called_msg = "Esimeses ülesandes pead kasutama liitmist: `+`",
+                     error_msg = "Esimeses ülesandes on midagi valesti!",
+                     incorrect_msg = "Oled liitnud valed arvud.")
+
+
+
+
 test_output_contains(expr = "(sqrt(3) + 4) / 5",
                      times = 1,
                      incorrect_msg = "Midagi läks valesti! Kontrolli esimese ülesande vastust.")
