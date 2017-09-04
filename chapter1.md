@@ -143,9 +143,12 @@ test_function_result(name = "sqrt",
                      error_msg = "Esimeses ülesandes on midagi valesti!",
                      incorrect_msg = "Oled funktsioonile `sqrt` andnud vale väärtusega argumendi")
 
-check_operator(name = "+",
-                     index = 1,
-                     not_called_msg = "Esimeses ülesandes pead kasutama liitmist: `+`")
+
+ex() %>% check_operator("+") %>% check_result() %>% check_equal()
+
+#check_operator(name = "+",
+#                     index = 1,
+#                     not_called_msg = "Esimeses ülesandes pead kasutama liitmist: `+`")
 
 #check_operator(state, name, index = 1, append = TRUE, not_called_msg = NULL)
 
