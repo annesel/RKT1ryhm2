@@ -94,7 +94,7 @@ ja paar funktsiooni:
 
 1. $ (\sqrt{3} + 4) / 5 $
 2. $ (245 - 3^6)^2 $
-3. $ \frac{\sqrt{3} + 4}{5}$
+3. $ \frac{\sqrt{3} + 4}{55}$
 
 
 *** =hint
@@ -126,7 +126,7 @@ ja paar funktsiooni:
 (245 - 3^6)^2 
 
 # Ülesanne 3
-(sqrt(3) + 4) / 5
+(sqrt(3) + 4) / 55
 
 
 ```
@@ -157,9 +157,6 @@ test_output_contains(expr = "(sqrt(3) + 4) / 5",
  
  
  
- 
- 
- 
 # ÜL 2
 test_output_contains(expr = "(245 - 3^6)^2 ",
                      times = 1,
@@ -167,7 +164,7 @@ test_output_contains(expr = "(245 - 3^6)^2 ",
  
  
 # Ül 3
-test_output_contains(expr = "(sqrt(3) + 4) / 5",
+test_output_contains(expr = "(sqrt(3) + 4) / 55",
                      times = 1,
                      incorrect_msg = "Midagi läks valesti! Kontrolli kolmanda ülesande vastust.")
  
