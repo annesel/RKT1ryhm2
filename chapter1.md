@@ -740,7 +740,7 @@ is.nan(muutuja2)
 
 # Ülesanne 3: Asenda objekti muutuja3 esimene element puuduva väärtusega, selleks asenda alakriipis sobiva tõeväärtusega. Prindi tulemus ekraanile.
 is.na(muutuja3)[1] <- TRUE
-muutuja2
+muutuja3
 ```
 
 *** =sct
