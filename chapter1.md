@@ -745,7 +745,7 @@ muutuja2
 *** =sct
 ```{r}
 test_predefined_objects("muutuja1",undefined_msg = "Oled vektori `muutuja1` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `muutuja1` väärtused on muudetud! Alusta uuesti")
-test_predefined_objects("muutuja2",undefined_msg = "Oled vektori `muutuja2` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `muutuja2` väärtused on muudetud! Alusta uuesti")
+#test_predefined_objects("muutuja2",undefined_msg = "Oled vektori `muutuja2` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `muutuja2` väärtused on muudetud! Alusta uuesti")
 
 
 test_function_result("is.logical",  args = "x", index = 1,
