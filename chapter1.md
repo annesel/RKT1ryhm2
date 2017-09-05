@@ -688,8 +688,8 @@ Tüübi kontroll, teisendamine
 
 - Vaata üle millised vektorid etteantud koodi alguses moodustatakse.
 - **Ülesanne 1**: Kontrolli, kas vektor `muutuja1` on loogilist tüüpi. Täienda etteantud koodi, pannes kirja kontrolliks sobiva funktsiooni nime.
-- **Ülesanne 2**: Rakenda funktsiooni `is.na()` teisele moodustatud vektroile `muutuja2`. Pane tähele, et funktsiooni tulemus on ka vektor.
-- **Ülesanne 3**: Asenda vektoris `muutuja2` esimene element tühikuga, kasutades funktsiooni `is.na()` abi. Prindi muudetud vektor ekraanile.
+- **Ülesanne 2**: Rakenda funktsiooni `is.nan()` teisele moodustatud vektroile `muutuja2`. Pane tähele, et funktsiooni tulemus on ka vektor.
+- **Ülesanne 3**: Asenda vektoris `muutuja3` esimene element tühikuga, kasutades funktsiooni `is.na()` abi. Prindi muudetud vektor ekraanile.
 
 *** =hint
 
@@ -704,8 +704,9 @@ Tüübi kontroll, teisendamine
 # Moodustame mõned vektorid ja vaatame tulemust.
 muutuja1 <- c("TRUE", "true",  "Tru", "FALSE", "F", "false", NA)
 muutuja2 <- c(1:3, NA, 0, Inf - Inf)
-muutuja1
-muutuja2
+muutuja3 <- 1:6
+muutuja1; muutuja2; muutuja3
+
 
 
 # Ülesanne 1: Kontrolli kas vektor muutuja1 on loogilist tüüpi(asenda alakriipis sobiva sõnega, et moodustuks õige funktsiooni nimi).
@@ -714,9 +715,9 @@ is.______(muutuja1)
 # Ülesanne 2: Rakenda funktsiooni is.nan() vektorile muutuja2.
 
 
-# Ülesanne 3: Asenda vektori muutuja2 esimene element puuduva väärtusega, selleks asenda järgmises käsus alakriipis sobiva tõeväärtusega. Prindi tulemus ekraanile.
-is.na(muutuja2)[1] <- _________
-muutuja2
+# Ülesanne 3: Asenda vektori muutuja3 esimene element puuduva väärtusega, selleks asenda järgmises käsus alakriipis sobiva tõeväärtusega. Prindi tulemus ekraanile.
+is.na(muutuja3)[1] <- _________
+muutuja3
 
 
 ```
@@ -726,8 +727,8 @@ muutuja2
 # Moodustame mõned vektorid ja vaatame tulemust.
 muutuja1 <- c("TRUE", "true",  "Tru", "FALSE", "F", "false", NA)
 muutuja2 <- c(1:3, NA, 0, Inf - Inf)
-muutuja1
-muutuja2
+muutuja3 <- 1:6
+muutuja1; muutuja2; muutuja3
 
 
 # Ülesanne 1: Kontrolli kas objekt muutuja1 on loogilist tüüpi(asenda alakriipis sobiva sõnega, et moodustuks õige funktsiooni nimi).
@@ -737,15 +738,15 @@ is.logical(muutuja1)
 # Ülesanne 2: Rakenda funktsiooni is.nan() objektile muutuja2.
 is.nan(muutuja2)
 
-# Ülesanne 3: Asenda objekti muutuja2 esimene element puuduva väärtusega, selleks asenda alakriipis sobiva tõeväärtusega. Prindi tulemus ekraanile.
-is.na(muutuja2)[1] <- TRUE
+# Ülesanne 3: Asenda objekti muutuja3 esimene element puuduva väärtusega, selleks asenda alakriipis sobiva tõeväärtusega. Prindi tulemus ekraanile.
+is.na(muutuja3)[1] <- TRUE
 muutuja2
 ```
 
 *** =sct
 ```{r}
 test_predefined_objects("muutuja1",undefined_msg = "Oled vektori `muutuja1` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `muutuja1` väärtused on muudetud! Alusta uuesti")
-#test_predefined_objects("muutuja2",undefined_msg = "Oled vektori `muutuja2` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `muutuja2` väärtused on muudetud! Alusta uuesti")
+test_predefined_objects("muutuja2",undefined_msg = "Oled vektori `muutuja2` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `muutuja2` väärtused on muudetud! Alusta uuesti")
 
 
 test_function("is.logical",  args = "x", index = 1,
@@ -773,9 +774,9 @@ test_function("is.na",  args = "x", index = 2,
               not_called_msg = "Viimases ülesandes kasuta funktsiooni `is.na`",
               args_not_specified_msg = NULL,
               incorrect_msg = "Teises ülesandes on viga. Alusta uuesti.")
-test_object("muutuja2", undefined_msg = "Muutujat `muutuja2` pole!", incorrect_msg = "Kas tegid omistamise kujul `is.na(muutuja2)[1] <- TRUE`?")
+test_object("muutuja3", undefined_msg = "Muutujat `muutuja2` pole!", incorrect_msg = "Kas tegid omistamise kujul `is.na(muutuja2)[1] <- TRUE`?")
 
-test_output_contains("muutuja2", incorrect_msg = "Vektor `muutuja2` pole välja prinditud!")
+test_output_contains("muutuja3", incorrect_msg = "Vektor `muutuja3` pole välja prinditud!")
 
 
 
