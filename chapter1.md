@@ -54,7 +54,7 @@ x <- 7
 *** =sct
 ```{r}
 # esimene
-test_output_contains("3+4", incorrect_msg = "Oled esimeses ülesandes õige vastuse valeks parandanud. Alusta uuesti!")
+test_output_contains("3+4", incorrect_msg = "Oled esimeses ylesandes õige vastuse valeks parandanud. Alusta uuesti!")
 
 
 # teine
