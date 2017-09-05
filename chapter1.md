@@ -54,7 +54,7 @@ x <- 7
 *** =sct
 ```{r}
 # esimene
-test_output_contains("7", times = 1, incorrect_msg = "Oled esimeses ülesandes õige vastuse valeks parandanud. Alusta uuesti!")
+test_output_contains("3 + 4", times = 1, incorrect_msg = "Oled esimeses ülesandes õige vastuse valeks parandanud. Alusta uuesti!")
 
 
 # teine
@@ -555,7 +555,7 @@ success_msg("Super!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:dd8c92ca90
-## ## Vektorid 2
+## Vektorid 2
 
 Väga sageli on tarvis vektorist kätte saada meile hetkel vajalikku alamosa. Vaatame paari võimalust vektorist elementide välja noppimiseks. 
 
@@ -564,7 +564,8 @@ Väga sageli on tarvis vektorist kätte saada meile hetkel vajalikku alamosa. Va
 
 *** =instructions
  - Tee  näited 1 kuni 3  ükshaaval läbi ja uuri tulemust.
- - **Ülesanne:** Vali välja jaamad, kus temperatuur on olnud -17 või alla selle. Kasuta tõeväärtusvektorit ja kandilisi sulge `[]`
+ - **Ülesanne 1:** Vali temperatuurivektorist elemendid, mis on paarisarvulistel kohtadel (paarisarvulise vektori moodustamiseks kasuta funktsiooni `seq()`). Prindi tulemus ekraanile.
+ - **Ülesanne 2:** Vali välja jaamad, kus temperatuur on olnud -17 või alla selle. Kasuta tõeväärtusvektorit ja kandilisi sulge `[]`. Prindi tulemus ekraanile.
 
 *** =hint
 - Märgi $\leq$ moodustamiseks kombineeri `<` ja `=` märke:  `<=`.
@@ -579,7 +580,7 @@ jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "V
 ```{r}
 # Muutujad temp ja jaam on töölaual juba olemas
 
-# Näide 1
+# Näide 1. Elementide valimine indeksite kaudu
 temp[ 1 ] # vektori esimene element
 temp[ -1 ] # vektori kõik elemendid va esimene
 temp[ c(1, 5, 9) ] # vektori esimene, viies ja üheksas element
@@ -592,9 +593,15 @@ jaam == "Tallinn"  # Mitmes jaam on Tallinn?
 jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
 temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
 
-# Ülesanne: Vali välja tingimusele vastavad temperatuurid, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
-vastus <- ________
-vastus
+
+# Ülesanne 1: Vali välja tingimusele vastavad temperatuurid, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
+vastus1 <- temp[_______]
+vastus1
+
+
+# Ülesanne 2: Vali välja tingimusele vastavad temperatuurid, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
+vastus2 <- ________
+vastus2
 ```
 
 *** =solution
@@ -612,14 +619,29 @@ jaam == "Tallinn"  # Mitmes jaam on Tallinn?
 jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
 temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
 
-# Ülesanne:  Vali välja tingimusele vastavad jaamad, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
-vastus <- jaam[temp <= -17]
-vastus
+
+# Ülesanne 1: Vali välja tingimusele vastavad temperatuurid, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
+vastus1 <- temp[seq(2, 9, 2)]
+vastus1
+
+
+# Ülesanne 2: Vali välja tingimusele vastavad temperatuurid, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
+vastus2 <- jaam[temp <= -17]
+vastus2
+
+
 ```
 
 *** =sct
 ```{r}
-test_object("vastus", undefined_msg = NULL, incorrect_msg = "Kas kasutasid käsku `jaam[temp <= -17]`?")
+test_object("vastus1", undefined_msg = "Muutujat `vastus1` pole!", incorrect_msg = "Kas kasutasid käsku `jaam[temp <= -17]`?")
+
+
+
+test_object("vastus2", undefined_msg = "Muutujat `vastus2` pole!", incorrect_msg = "Kas moodustasid tõevektori kujul `temp <= -17`?")
+
+
+
 success_msg("Tubli töö! Jätka samas vaimus!")
 ```
 
