@@ -92,9 +92,9 @@ ja paar funktsiooni:
 *** =instructions
 **Leia vastused järgmistele tehetele:**
 
-1. $25 - 1/4  + 5/9$
+1. $25 - 1:4  + 5:9$
 
-1. $ (\sqrt{3} + 4) / 5 $
+1. $ (\sqrt{3} + 4) : 5 $
 
 1. $ (245 - 3^6)^2 $
 
@@ -201,10 +201,15 @@ R-is võivad muutujate nimed sisaldada suuri ja väikesi tähti, numbreid, punkt
 **Lahenda ülesanded:**
 
 1. Omista arv $25 \pi$ muutujale `z`. Arv $\pi$ on R-is muutuja `pi` nime all.
+
 1. Leia arvu $25 \pi$ kümnendlogaritm, kasutades muutujat `z`.
+ 
 1. Leia arvu $25 \pi$ naturaallogaritm, kasutades muutujat `z`.
+
 1. Arvuta tehte $25 \pi + \frac{1}{25 \pi} - 2^{\frac{25\pi}{20}}$ vastus , kasutades muutujat `z`.
+
 1. Moodusta vektor `w`, milles on arvud $1, 2, \ldots, 250$.
+
 1. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$, kasutades eelnevalt defineeritud vektorit $w$.
 
 
@@ -369,9 +374,6 @@ success_msg("Tubli!")
 
 
 
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-<!------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
-
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:bc9440a76a
@@ -456,14 +458,15 @@ success_msg("Hästi tehtud! Suundu järgmise harjutuse juurde!")
 - Üksikuid arve või tekstiväärtusi saab kokku panna vektoriks funktsiooni `c()` (*combine*) abil. 
 - Veel võimalusi vektorite moodustamiseks:
     * `1:5                 # arvujada 1, 2, 3, 4, 5`
-    * `rep(1:5, times = 2)     # vektorit elementidega 1, 2, 3, 4, 5 korrata 2 korda`
+    * `rep(1:5, times = 2) # vektorit elementidega 1, 2, 3, 4, 5 korrata 2 korda`
     * `seq(2, 8, by = 2)   # arvujada sammuga 2: 2, 4, 6, 8`
-
+- Kui teha vektorobjektidega arvtusi, siis tehted tehakse läbi iga vektori elemendiga.
 
 *** =instructions
 - Tee läbi näited 1 kuni 3.
-- **Ülesanne 1.** Kasutades operaatorit `:` moodusta vektor nimega `jada1`, mille elemendid on `5, 4, 3, 2, 1`. Väljasta tulemus ekraanile.
-- **Ülesanne 2.** Kasutades funkstiooni `rep` moodusta vektor nimega `jada2`, mille elemendid on `"Ruhnu", "Kihnu", "Ruhnu", "Kihnu", "Ruhnu", "Kihnu"`. Väljasta tulemus ekraanile.
+- **Ülesanne 1.** Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale, selleks korruta temperatuurid $\frac{9}{5}$ ja liida 32.
+- **Ülesanne 2.** Kasutades operaatorit `:` moodusta vektor nimega `jada1`, mille elemendid on `5, 4, 3, 2, 1`. Väljasta tulemus ekraanile.
+- **Ülesanne 3.** Kasutades funkstiooni `rep` moodusta vektor nimega `jada2`, mille elemendid on `"Ruhnu", "Kihnu", "Ruhnu", "Kihnu", "Ruhnu", "Kihnu"`. Väljasta tulemus ekraanile.
 
 
 *** =hint
@@ -476,22 +479,27 @@ success_msg("Hästi tehtud! Suundu järgmise harjutuse juurde!")
 
 *** =sample_code
 ```{r}
-# Näide 1: Moodustame 2 vektorit, millest ühes on kirjas temperatuurid (20.01.2010 kell 10), teises jaamad, kus need on mõõdetud :
+# Näide 1: Moodustame 2 vektorit, millest ühes on kirjas temperatuurid (20.01.2010 kell 10), teises ilmajaamad, kus need on mõõdetud :
 temp <- c(-6.2, -12.9, -13.0, -15.4, -16.1, -16.9, -17.0, -19.6, -19.9)
-jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "Võru", "Jõgeva")            # NB! Kui jutumärgid unustada, otsib R vastava nimega objekte!
+jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "Võru", "Jõgeva")            
 
-# Näide 2: Väljastame tulemused 
+# Näide 2: Väljastame tulemused ekraanile
 temp; jaam
 
-# Näide 3:  Tehted tehakse läbi kõigi vektori elementidega. Teisendame celsiuse skaalalt fahrenheiti skaalale
-Fahrenheit <- temp*9/5+32
+
+# Näide 3: Paneme temperatuuridele jaamanimed juurde ja vaatame tulemust
+names(temp) <- jaam
+temp
+
+# Ülesanne 1: Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale (asenda alakriipsud vajaliku tehteda) ja prindi tulemus ekraanile
+Fahrenheit <- ___________________ #temp*9/5 + 32
 Fahrenheit 
 
-# Ülesanne 1. Asenda alakriipsud õigete väärtustega
+# Ülesanne 2. Asenda alakriipsud õigete väärtustega
 jada1 <- __:__
 jada1
 
-# Ülesanne 2.  Asenda alakriipsud vajalike suurustega
+# Ülesanne 32.  Asenda alakriipsud vajalike suurustega
 jada2 <- rep(c(_____,_____), times = __)
 jada2
 
