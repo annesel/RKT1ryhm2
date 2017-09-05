@@ -735,7 +735,7 @@ is.logical(muutuja1)
 
 
 # Ülesanne 2: Rakenda funktsiooni is.na() objektile muutuja2.
-
+is.na(muutuja2)
 
 # Ülesanne 3: Asenda objekti muutuja2 esimene element puuduva väärtusega, selleks asenda alakriipis sobiva tõeväärtusega. Prindi tulemus ekraanile.
 is.na(muutuja2)[1] <- TRUE
