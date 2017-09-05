@@ -486,12 +486,11 @@ jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "V
 # Näide 2: Väljastame tulemused ekraanile
 temp; jaam
 
-
 # Näide 3: Paneme temperatuuridele jaamanimed juurde ja vaatame tulemust
 names(temp) <- jaam
 temp
 
-# Ülesanne 1: Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale (asenda alakriipsud vajaliku tehteda) ja prindi tulemus ekraanile
+# Ülesanne 1: Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale (asenda alakriipsud vajaliku tehtega) ja prindi tulemus ekraanile
 Fahrenheit <- ___________________ #temp*9/5 + 32
 Fahrenheit 
 
@@ -511,11 +510,15 @@ jada2
 temp <- c(-6.2, -12.9, -13.0, -15.4, -16.1, -16.9, -17.0, -19.6, -19.9)
 jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "Võru", "Jõgeva")            # NB! Kui jutumärgid unustada, otsib R vastava nimega objekte!
 
-# Näide 2: Väljastame tulemused 
+# Näide 2: Väljastame tulemused ekraanile
 temp; jaam
 
-# Näide 3:  Tehted tehakse läbi kõigi vektori elementidega. Teisendame celsiuse skaalalt fahrenheiti skaalale
-Fahrenheit <- temp*9/5+32
+# Näide 3: Paneme temperatuuridele jaamanimed juurde ja vaatame tulemust
+names(temp) <- jaam
+temp
+
+# Ülesanne 1: Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale (asenda alakriipsud vajaliku tehteda) ja prindi tulemus ekraanile
+Fahrenheit <- temp * 9/5 + 32
 Fahrenheit 
 
 # Ülesanne 1. Asenda alakriipsud õigete väärtustega
@@ -529,7 +532,7 @@ jada2
 
 *** =sct
 ```{r}
-test_object("jada1", incorrect_msg= "Kas kasutasid `jada1` defineerimiseks käsku `5:1`?")
+test_object("Fahrenheit", undefined_msg = "Muutuja `Fahrenheit` on kaduma läinud!", incorrect_msg = "Kontrolli, kas omistad muutujale `Fahrenheit` tehte `temp * 9/5 + 32`.")
 test_object("jada2", undefined_msg = NULL, incorrect_msg = "Muutuja `jada2` on defineeritud valesti. Proovi veel!")
 success_msg("Super!")
 
