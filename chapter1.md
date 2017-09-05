@@ -538,7 +538,7 @@ test_object("Fahrenheit", undefined_msg = "Muutuja `Fahrenheit` on kaduma läinu
 
 
 test_predefined_objects("lisa",undefined_msg = "Oled vektori `lisa` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `lisa` väärtused on muudetud!")
-test_student_typed("lisa")
+test_output_contains("lisa", "Vektor `lisa` pole välja prinditud!")
 
 
 test_object("temp2", undefined_msg = "Puudub vektor `temp2`. Proovi uuesti!", incorrect_msg = "Vektori `temp2` väärtus ei vasta nõutule!")
