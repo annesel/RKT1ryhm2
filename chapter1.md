@@ -634,7 +634,7 @@ vastus2
 
 *** =sct
 ```{r}
-test_object("vastus1", undefined_msg = "Muutujat `vastus1` pole!", incorrect_msg = "Kas kasutasid käsku `jaam[temp <= -17]`?")
+test_object("vastus1", undefined_msg = "Muutujat `vastus1` pole!", incorrect_msg = "Kas kasutasid käsku `temp[seq(2, 8, 2)]`?")
 test_function("seq", args = list("from", "to", "by"), index = 1,
               eval = TRUE,
               eq_condition = "equivalent",
