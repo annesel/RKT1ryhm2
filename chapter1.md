@@ -761,7 +761,7 @@ test_function("is.logical",  args = "x", index = 1,
 test_function("is.nan",  args = "x", index = 1,
               eval = TRUE,
               eq_condition = "equivalent",
-              not_called_msg = "Teises ülesandes kasuta funktsiooni `is.na`",
+              not_called_msg = "Teises ülesandes kasuta funktsiooni `is.nan`",
               args_not_specified_msg = NULL,
               incorrect_msg = "Teises ülesandes on viga. Alusta uuesti.")
 
