@@ -640,7 +640,7 @@ test_function("seq", args = list("from", "to", "by"), index = 1,
               eq_condition = "equivalent",
               not_called_msg = "Kasuta indeksite määramiseks funktsiooni `seq()`!",
               args_not_specified_msg = "Kontrolli üle millised argumendid oled funktsioonile `seq()` andnud",
-              incorrect_msg = "Funktsiooni `seq()` tulemus ei sobi! Proovi uuesti.)
+              incorrect_msg = "Funktsiooni `seq()` tulemus ei sobi! Proovi uuesti.")
 
 
 test_object("vastus2", undefined_msg = "Muutujat `vastus2` pole!", incorrect_msg = "Kas moodustasid tõevektori kujul `temp <= -17`?")
