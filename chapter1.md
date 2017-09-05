@@ -93,8 +93,11 @@ ja paar funktsiooni:
 **Leia vastused järgmistele tehetele:**
 
 1. $25 - 1/4  + 5/9$
+
 1. $ (\sqrt{3} + 4) / 5 $
+
 1. $ (245 - 3^6)^2 $
+
 1. $ \frac{\sqrt{3} + 4}{55}$
 
 
