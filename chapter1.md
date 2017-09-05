@@ -711,7 +711,7 @@ muutuja2
 # Ülesanne 1: Kontrolli kas vektor muutuja1 on loogilist tüüpi(asenda alakriipis sobiva sõnega, et moodustuks õige funktsiooni nimi).
 is.______(muutuja1)
 
-# Ülesanne 2: Rakenda funktsiooni is.na() vektorile muutuja2.
+# Ülesanne 2: Rakenda funktsiooni is.nan() vektorile muutuja2.
 
 
 # Ülesanne 3: Asenda vektori muutuja2 esimene element puuduva väärtusega, selleks asenda järgmises käsus alakriipis sobiva tõeväärtusega. Prindi tulemus ekraanile.
@@ -734,8 +734,8 @@ muutuja2
 is.logical(muutuja1)
 
 
-# Ülesanne 2: Rakenda funktsiooni is.na() objektile muutuja2.
-is.na(muutuja2)
+# Ülesanne 2: Rakenda funktsiooni is.nan() objektile muutuja2.
+is.nan(muutuja2)
 
 # Ülesanne 3: Asenda objekti muutuja2 esimene element puuduva väärtusega, selleks asenda alakriipis sobiva tõeväärtusega. Prindi tulemus ekraanile.
 is.na(muutuja2)[1] <- TRUE
@@ -757,7 +757,7 @@ test_function_result("is.logical",  args = "x", index = 1,
 
 
 
-test_function_result("is.na",  args = "x", index = 1,
+test_function_result("is.nan",  args = "x", index = 1,
               eval = TRUE,
               eq_condition = "equivalent",
               not_called_msg = "Teises ülesandes kasuta funktsiooni `is.na`",
