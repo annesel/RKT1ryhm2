@@ -541,7 +541,7 @@ test_predefined_objects("lisa",undefined_msg = "Oled vektori `lisa` kustutanud! 
 test_student_typed("lisa")
 
 
-test_object("temp2", undefined_msg = "Puudub vektor `temp2`. Proovi uuesti!", incorrect_msg = "Vektri `temp2` väärtus ei vasta nõutule!")
+test_object("temp2", undefined_msg = "Puudub vektor `temp2`. Proovi uuesti!", incorrect_msg = "Vektori `temp2` väärtus ei vasta nõutule!")
 
 success_msg("Super!")
 
