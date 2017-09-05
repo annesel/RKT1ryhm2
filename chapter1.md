@@ -465,8 +465,8 @@ success_msg("Hästi tehtud! Suundu järgmise harjutuse juurde!")
 *** =instructions
 - Tee läbi näited 1 kuni 3.
 - **Ülesanne 1.** Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale, selleks korruta temperatuurid $\frac{9}{5}$ ja liida 32.
-- **Ülesanne 2.** Kasutades operaatorit `:` moodusta vektor nimega `jada1`, mille elemendid on `5, 4, 3, 2, 1`. Väljasta tulemus ekraanile.
-- **Ülesanne 3.** Kasutades funkstiooni `rep` moodusta vektor nimega `jada2`, mille elemendid on `"Ruhnu", "Kihnu", "Ruhnu", "Kihnu", "Ruhnu", "Kihnu"`. Väljasta tulemus ekraanile.
+- **Ülesanne 2.** Vektoris `lisa` on veel kaks õhutemperatuuri($C^o$). Prindi see vektor ekraanile.
+- **Ülesanne 3.** Kasutades funkstiooni `c()` moodusta vektor nimega `temp2`, mille esimesed 9 elementi  on temperatuurid vektorist `temp` ja järgmised 2 temperatuurid vektroist `lisa`. Väljasta tulemus ekraanile.
 
 
 *** =hint
@@ -474,6 +474,9 @@ success_msg("Hästi tehtud! Suundu järgmise harjutuse juurde!")
 
 *** =pre_exercise_code
 ```{r}
+lisa <- c(-24.9, -16.1)
+names(lisa) <- c("Mustvee", "Keila")
+
 
 ```
 
@@ -490,17 +493,16 @@ temp; jaam
 names(temp) <- jaam
 temp
 
-# Ülesanne 1: Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale (asenda alakriipsud vajaliku tehtega) ja prindi tulemus ekraanile
-Fahrenheit <- ___________________ #temp*9/5 + 32
+# Ülesanne 1: Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale (asenda alakriips vajaliku tehtega) ja prindi tulemus ekraanile
+Fahrenheit <- ___________________ 
 Fahrenheit 
 
-# Ülesanne 2. Asenda alakriipsud õigete väärtustega
-jada1 <- __:__
-jada1
+# Ülesanne 2. Prindi ekraanile vektor nimega 'lisa'
 
-# Ülesanne 32.  Asenda alakriipsud vajalike suurustega
-jada2 <- rep(c(_____,_____), times = __)
-jada2
+
+# Ülesanne 3. Moodusta nõutud kujul uus vektor, selleks asenda alakriipsud vajalike suurustega. Prindi tulemus ekraanile.
+temp2 <- c(_____, _____) 
+temp2
 
 ```
 
@@ -521,19 +523,26 @@ temp
 Fahrenheit <- temp * 9/5 + 32
 Fahrenheit 
 
-# Ülesanne 1. Asenda alakriipsud õigete väärtustega
-jada1 <- 5:1
-jada1
+# Ülesanne 2. Prindi ekraanile vektor nimega 'lisa'
+lisa
 
-# Ülesanne 2.  Asenda alakriipsud vajalike suurustega
-jada2 <- rep(c("Ruhnu", "Kihnu"), times = 3)
-jada2
+# Ülesanne 3. Moodusta nõutud kujul uus vektor, selleks asenda alakriipsud vajalike suurustega. Prindi tulemus ekraanile.
+temp2 <- c(temp, lisa) 
+temp2
 ```
 
 *** =sct
 ```{r}
-test_object("Fahrenheit", undefined_msg = "Muutuja `Fahrenheit` on kaduma läinud!", incorrect_msg = "Kontrolli, kas omistad muutujale `Fahrenheit` tehte `temp * 9/5 + 32`.")
-test_object("jada2", undefined_msg = NULL, incorrect_msg = "Muutuja `jada2` on defineeritud valesti. Proovi veel!")
+test_object("Fahrenheit", undefined_msg = "Muutuja `Fahrenheit` on kaduma läinud!", incorrect_msg = "Kontrolli, kas omistad muutujale `Fahrenheit` õige tehte.")
+#test_output_contains("temp * 9/5 + 32", times = 1, incorrect_msg = "Midagi läks valesti! Kontrolli temperatuuri teisendamist.")
+
+
+test_predefined_objects("lisa",undefined_msg = "Oled vektori `lisa` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `lisa` väärtused on muudetud!")
+test_student_typed("lisa")
+
+
+test_object("temp2", undefined_msg = "Puudub vektor `temp2`. Proovi uuesti!", incorrect_msg = "Vektri `temp2` väärtus ei vasta nõutule!")
+
 success_msg("Super!")
 
 ```
