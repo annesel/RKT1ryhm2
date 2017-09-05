@@ -542,6 +542,7 @@ test_output_contains("lisa", incorrect_msg = "Vektor `lisa` pole välja prinditu
 
 
 test_object("temp2", undefined_msg = "Puudub vektor `temp2`. Proovi uuesti!", incorrect_msg = "Vektori `temp2` väärtus ei vasta nõutule!")
+test_output_contains("temp2", incorrect_msg = "Vektor `temp2` pole välja prinditud!")
 
 success_msg("Super!")
 
