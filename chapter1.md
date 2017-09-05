@@ -586,7 +586,7 @@ temp[ -1 ] # vektori kõik elemendid va esimene
 temp[ c(1, 5, 9) ] # vektori esimene, viies ja üheksas element
 
 # Näide 2. Tulemuseks tõeväärtustega vektorid 
-temp < -15 # Kontrollime millised temperatuurid jäävad alla -15 kraadi. 
+temp < -15 # Kontrollime millised temperatuurid jäävad alla -15 kraadi 
 jaam == "Tallinn"  # Mitmes jaam on Tallinn?
 
 # Näide 3. Tingimustele vastavate elementide väljavalimine
@@ -594,12 +594,12 @@ jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
 temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
 
 
-# Ülesanne 1: Vali välja tingimusele vastavad temperatuurid, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
+# Ülesanne 1: Vali nõutud elemendid temperatuurivektorist, omista tulemus muutujale 'vastus1'. Prindi tulemus ekraanile
 vastus1 <- temp[_______]
 vastus1
 
 
-# Ülesanne 2: Vali välja tingimusele vastavad temperatuurid, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
+# Ülesanne 2: Vali välja tingimusele vastavad ilmajaamade nimed, omista tulemus muutujale 'vastus2'. Prindi tulemus ekraanile
 vastus2 <- ________
 vastus2
 ```
@@ -620,12 +620,12 @@ jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
 temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
 
 
-# Ülesanne 1: Vali välja tingimusele vastavad temperatuurid, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
+# Ülesanne 1: Vali nõutud elemendid temperatuurivektorist, omista tulemus muutujale 'vastus1'. Prindi tulemus ekraanile
 vastus1 <- temp[seq(2, 9, 2)]
 vastus1
 
 
-# Ülesanne 2: Vali välja tingimusele vastavad temperatuurid, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
+# Ülesanne 2: Vali välja tingimusele vastavad ilmajaamade nimed, omista tulemus muutujale 'vastus2'. Prindi tulemus ekraanile
 vastus2 <- jaam[temp <= -17]
 vastus2
 
@@ -635,7 +635,12 @@ vastus2
 *** =sct
 ```{r}
 test_object("vastus1", undefined_msg = "Muutujat `vastus1` pole!", incorrect_msg = "Kas kasutasid käsku `jaam[temp <= -17]`?")
-
+test_function("seq", args = list("from", "to", "by"), index = 1,
+              eval = TRUE,
+              eq_condition = "equivalent",
+              not_called_msg = "Kasuta indeksite määramiseks funktsiooni `seq()`!",
+              args_not_specified_msg = "Kontrolli üle millised argumendid oled funktsioonile `seq()` andnud",
+              incorrect_msg = "Funktsiooni `seq()` tulemus ei sobi! Proovi uuesti.)
 
 
 test_object("vastus2", undefined_msg = "Muutujat `vastus2` pole!", incorrect_msg = "Kas moodustasid tõevektori kujul `temp <= -17`?")
