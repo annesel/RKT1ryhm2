@@ -748,7 +748,7 @@ test_predefined_objects("muutuja1",undefined_msg = "Oled vektori `muutuja1` kust
 #test_predefined_objects("muutuja2",undefined_msg = "Oled vektori `muutuja2` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `muutuja2` väärtused on muudetud! Alusta uuesti")
 
 
-test_function_result("is.logical",  args = "x", index = 1,
+test_function("is.logical",  args = "x", index = 1,
               eval = TRUE,
               eq_condition = "equivalent",
               not_called_msg = "Esimeses ülesandes kasuta funktsiooni `is.logical`",
