@@ -638,7 +638,7 @@ test_object("vastus1", undefined_msg = "Muutujat `vastus1` pole!", incorrect_msg
 test_function("seq", args = list("from", "to", "by"), index = 1,
               eval = TRUE,
               eq_condition = "equivalent",
-              not_called_msg = "Kasuta indeksite määramiseks funktsiooni `seq()`!",
+              not_called_msg = "Kasuta esimeses ülesandes indeksite määramiseks funktsiooni `seq()`!",
               args_not_specified_msg = "Kontrolli üle millised argumendid oled funktsioonile `seq()` andnud",
               incorrect_msg = "Funktsiooni `seq()` tulemus ei sobi! Proovi uuesti.")
 
