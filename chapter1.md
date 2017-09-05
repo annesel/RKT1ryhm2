@@ -44,7 +44,7 @@ Oma vastuse esitamiseks vajuta `Submit Answer`-nuppu, siis saadetakse ülesanded
 *** =solution
 ```{r}
 # Liida
-3 + 7
+3 + 4
 
 # Omista
 x <- 7
