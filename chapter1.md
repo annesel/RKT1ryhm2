@@ -464,13 +464,13 @@ success_msg("Hästi tehtud! Suundu järgmise harjutuse juurde!")
 
 *** =instructions
 - Tee läbi näited 1 kuni 3.
-- **Ülesanne 1.** Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale, selleks korruta temperatuurid $\frac{9}{5}$ ja liida 32.
+- **Ülesanne 1.** Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale ($F^o = C^o \frac{9}{5} + 32$). Omista tulemus muutujale `Fahrenheit`.
 - **Ülesanne 2.** Vektoris `lisa` on veel kaks õhutemperatuuri($C^o$). Prindi see vektor ekraanile.
 - **Ülesanne 3.** Kasutades funkstiooni `c()` moodusta vektor nimega `temp2`, mille esimesed 9 elementi  on temperatuurid vektorist `temp` ja järgmised 2 temperatuurid vektroist `lisa`. Väljasta tulemus ekraanile.
 
 
 *** =hint
-- Kasuta teises ülesandes funktsiooni `rep` esimese argumendina vektorit  `c("Ruhnu", "Kihnu")`.
+- Funktsiooni `c()` saab lisaks üksikutest väärtustest vektori tegemisele kasutada ka olemasolevate vektorite kombineerimiseks: `c(vektor1, vektor2)`.
 
 *** =pre_exercise_code
 ```{r}
@@ -523,10 +523,10 @@ temp
 Fahrenheit <- temp * 9/5 + 32
 Fahrenheit 
 
-# Ülesanne 2. Prindi ekraanile vektor nimega 'lisa'
+# Ülesanne 2: Prindi ekraanile vektor nimega 'lisa'
 lisa
 
-# Ülesanne 3. Moodusta nõutud kujul uus vektor, selleks asenda alakriipsud vajalike suurustega. Prindi tulemus ekraanile.
+# Ülesanne 3: Moodusta nõutud kujul uus vektor, selleks asenda alakriipsud vajalike suurustega. Prindi tulemus ekraanile.
 temp2 <- c(temp, lisa) 
 temp2
 ```
@@ -534,7 +534,7 @@ temp2
 *** =sct
 ```{r}
 test_object("Fahrenheit", undefined_msg = "Muutuja `Fahrenheit` on kaduma läinud!", incorrect_msg = "Kontrolli, kas omistad muutujale `Fahrenheit` õige tehte.")
-#test_output_contains("temp * 9/5 + 32", times = 1, incorrect_msg = "Midagi läks valesti! Kontrolli temperatuuri teisendamist.")
+test_output_contains("Fahrenheit", times = 1, incorrect_msg = "Midagi läks valesti! Kontrolli temperatuuri teisendamist.")
 
 
 test_predefined_objects("lisa",undefined_msg = "Oled vektori `lisa` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `lisa` väärtused on muudetud!")
@@ -564,7 +564,7 @@ Väga sageli on tarvis vektorist kätte saada meile hetkel vajalikku alamosa. Va
 
 *** =instructions
  - Tee  näited 1 kuni 3  ükshaaval läbi ja uuri tulemust.
- - **Ülesanne:** vali välja jaamad, kus temperatuur on olnud -17 või alla selle. Kasuta tingimuse kirjapanekul märki $\leq$.
+ - **Ülesanne:** Vali välja jaamad, kus temperatuur on olnud -17 või alla selle. Kasuta tõeväärtusvektorit ja kandilisi sulge `[]`
 
 *** =hint
 - Märgi $\leq$ moodustamiseks kombineeri `<` ja `=` märke:  `<=`.
@@ -577,6 +577,8 @@ jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "V
 
 *** =sample_code
 ```{r}
+# Muutujad temp ja jaam on töölaual juba olemas
+
 # Näide 1
 temp[ 1 ] # vektori esimene element
 temp[ -1 ] # vektori kõik elemendid va esimene
@@ -590,7 +592,7 @@ jaam == "Tallinn"  # Mitmes jaam on Tallinn?
 jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
 temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
 
-# Ülesanne: asenda alakriipsud õige käsuga
+# Ülesanne: Vali välja tingimusele vastavad temperatuurid, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
 vastus <- ________
 vastus
 ```
@@ -610,7 +612,7 @@ jaam == "Tallinn"  # Mitmes jaam on Tallinn?
 jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
 temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
 
-# Ülesanne: asenda alakriipsud õige käsuga
+# Ülesanne:  Vali välja tingimusele vastavad jaamad, omista tulemus muutujale 'vastus'. Prindi tulemus ekraanile
 vastus <- jaam[temp <= -17]
 vastus
 ```
@@ -623,6 +625,104 @@ success_msg("Tubli töö! Jätka samas vaimus!")
 
 
 
+
+
+
+
+
+
+
+--- type:NormalExercise lang:r xp:100 skills:1 key:bcc48c5aea
+## Väärtuste tüübid. Puuduvad väärtused
+
+
+
+R-is on põhilised väärtuste tüübid, mida kasutame:
+
+* `int` / `integer` -- täisarvud
+* `numeric` -- reaalarvud
+* `char` / `character` -- sõned (tähemärgid ja muud tekstilised sümbolid, sisestamisel kasutada jutumärke)
+* `logical` -- tõeväärtused (ainult kaks väärtust: `TRUE` või `FALSE`)
+
+Erisümbolid
+
+* `NA` -- puuduv väärtus
+* `NaN` -- määramatus
+* `Inf`, `-Inf` -- lõpmatus
+* 
+
+Tüübi kontroll, teisendamine
+* Objekti väärtuse tüübi kontrolliks saab kasutada funktsioone kujul `is.<tüüp>`, näiteks `is.character(muutuja)`, `is.nan(muutuja)`.
+* Tüübi teisenduseks aga funktsioone `as.<tüüp>`, näiteks `as.integer(muutuja)`.
+
+
+
+*** =instructions
+
+- 
+
+
+*** =hint
+
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+# Moodustame mõned vektorid ja vaatame tulemust.
+muutuja1 <- c("TRUE", "true",  "Tru", "FALSE", "F", "false", NA)
+muutuja2 <- c(1:3, NA, 0, Inf - Inf)
+muutuja1
+muutuja2
+
+
+# Ülesanne 1: Kontrolli kas objekt muutuja1 on loogilist tüüpi(asenda alakriipis sobiva sõnega, et moodustuks õige funktsiooni nimi).
+is.______(muutuja1)
+
+# Ülesanne 2: Rakenda funktsiooni is.na() objektile muutuja2.
+
+
+# Ülesanne 3: Asenda objekti muutuja2 esimene element puuduva väärtusega, selleks asenda alakriipis sobiva tõeväärtusega. Prindi tulemus ekraanile.
+is.na(muutuja2)[1] <- _________
+muutuja2
+
+
+```
+
+*** =solution
+```{r}
+# Moodustame mõned vektorid ja vaatame tulemust.
+muutuja1 <- c("TRUE", "true",  "Tru", "FALSE", "F", "false", NA)
+muutuja2 <- c(1:3, NA, 0, Inf - Inf)
+muutuja1
+muutuja2
+
+
+# Ülesanne 1: Kontrolli kas objekt muutuja1 on loogilist tüüpi(asenda alakriipis sobiva sõnega, et moodustuks õige funktsiooni nimi).
+is.logical(muutuja1)
+
+
+# Ülesanne 2: Rakenda funktsiooni is.na() objektile muutuja2.
+
+
+# Ülesanne 3: Asenda objekti muutuja2 esimene element puuduva väärtusega, selleks asenda alakriipis sobiva tõeväärtusega. Prindi tulemus ekraanile.
+is.na(muutuja2)[1] <- TRUE
+muutuja2
+```
+
+*** =sct
+```{r}
+test_predefined_objects("muutuja1",undefined_msg = "Oled vektori `muutuja1` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `muutuja1` väärtused on muudetud! Alusta uuesti")
+test_predefined_objects("muutuja2",undefined_msg = "Oled vektori `muutuja2` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `muutuja2` väärtused on muudetud! Alusta uuesti")
+
+
+
+
+
+```
 --- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:a1ac08c1e6
 ## Test 1. Küsimus 1.
 
