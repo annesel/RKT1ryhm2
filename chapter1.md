@@ -562,12 +562,17 @@ Väga sageli on tarvis vektorist kätte saada meile hetkel vajalikku alamosa. Va
 
 
 
-*** =instructions
+ 
+
+### Juhised
  - Tee  näited 1 kuni 3  ükshaaval läbi ja uuri tulemust.
- - **Ülesanne 1:** Vali temperatuurivektorist elemendid, mis on paarisarvulistel kohtadel (paarisarvulise vektori moodustamiseks kasuta funktsiooni `seq()`). Prindi tulemus ekraanile.
- - **Ülesanne 2:** Vali välja jaamad, kus temperatuur on olnud -17 või alla selle. Kasuta tõeväärtusvektorit ja kandilisi sulge `[]`. Prindi tulemus ekraanile.
+ - **Ülesanne 1:** Vali temperatuurivektorist elemendid, mis on paarisarvulistel kohtadel (paarisarvulise vektori moodustamiseks kasuta funktsiooni `seq()`). Omista saadud alamvektor muutujale `vastus1`. Prindi tulemus ekraanile.
+ - **Ülesanne 2:** Vali välja jaamad, kus temperatuur on olnud -17 või alla selle. Kasuta valiku tegemisel tõeväärtusvektorit ja kandilisi sulge `[]`. Omista saadud alamvektor muutujale `vastus2`.  Prindi tulemus ekraanile.
+
+
 
 *** =hint
+- Funktsioonis `seq()` peab määrama argumendid `from`, `to` ja `by`.
 - Märgi $\leq$ moodustamiseks kombineeri `<` ja `=` märke:  `<=`.
 
 *** =pre_exercise_code
