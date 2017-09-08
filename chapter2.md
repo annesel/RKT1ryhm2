@@ -190,11 +190,6 @@ test_student_typed("log(z)", not_typed_msg = "Kas kasutasid kolmandas ülesandes
   
   
 # neljas
-msg_undefinedz = "Kontrolli, kas oled defineerinud muutuja `z`."
-msg_incorrectz = "Kontrolli, kas oled muutujale `z` omistanud õige väärtuse."
-#test_object("z",  
-#            undefined_msg = msg_undefinedz,
-#            incorrect_msg = msg_incorrectz) 
 test_output_contains(expr = "z + 1/z - 2^(z/19)",
                      times = 1,
                      incorrect_msg = "Midagi läks valesti! Kontrolli neljanda ülesande tehte kirjapanekut.")
