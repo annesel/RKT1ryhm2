@@ -201,7 +201,7 @@ test_output_contains(expr = "z + 1/z - 2^(z/19)",
 
 test_student_typed(c("z + 1/z - 2^(z/19)", "z + 1/z - 2**(z/19)",
                     "1/z + z - 2^(z/19)" , "1/z + z - 2**(z/19)",
-                    "(z^2 +1)/z - 2^(z/19)", "(z^2 +1)/z - 2**(z/19)"), not_typed_msg = "Kas kasutasid viimases ülesandes muutujat `z` arvu &#36;25\pi&#36; asemel?")
+                    "(z^2 +1)/z - 2^(z/19)", "(z^2 +1)/z - 2**(z/19)"), not_typed_msg = "Kas kasutasid viimases ülesandes muutujat `z` arvu `25*pi` asemel?")
 
  
 
