@@ -786,7 +786,7 @@ test_output_contains("muutuja3", incorrect_msg = "Vektor `muutuja3` pole välja 
 --- type:MultipleChoiceExercise lang:r xp:100 skills:1 key:a1ac08c1e6
 ## Test 1. Küsimus 1.
 
-Muutja `k` väärtuseks on `"kuusteist"` ja muutuja `m` väärtuseks on `4`. Millega võrdub `n <- k + m` väärtus? 
+Muutuja `k` väärtuseks on `"kuusteist"` ja muutuja `m` väärtuseks on `4`. Millega võrdub `n <- k + m` väärtus? 
 
 *** =instructions
 
