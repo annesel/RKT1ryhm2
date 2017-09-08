@@ -290,9 +290,8 @@ Loogilisi tehteid on kolm
 
 *** =instructions
 - Tee läbi näide.
-- **Ülesanne 1.**  Väärtusta loogiline vektor, mis näitab, millised `x` väärtused on suuremad kui 30. Omista tulemus muutujale `x4` ja prindi see ekraanile.
-- **Ülesanne 2.** Väärtusta loogiline vektor, mis näitab, millised `x` väärtused on  väiksemad kui 40. Omista tulemus muutujale `x5` ja prindi see ekraanile.
-- **Ülesanne 3.** Väärtusta loogiline vektor `x6`, mis näitab, millised  `x` väärtused on vahemikus 30 kuni 40, kasutades vektoreid  `x4` ja  `x5` ning sobivat loogilist tehet (`|`, `&`, `!`). Prindi `x6` ekraanile.
+- **Ülesanne**  Leia tõevektor, mis näitaks millised vektori `y` väärtused vastavad sõnele "tere" või "tsau". Kasuta loogilise tehte kirjapanekul analoogiat näitega. 
+Omista vektor muutujale `viimane`, prindi see ekraanile. Vektori `y` väärtustest saad ülevaate sagedustabeli `table(y)` abil.
 
 *** =hint
 
@@ -312,7 +311,7 @@ abc != "c"
 !(abc == "c")
 
 
-# Ülesandes on uurimise all vektor y, vaata selle väärtuste sagedustabelit
+# Ülesandes on uurimise all tekstiväärtustega vektor y, vaata selle väärtuste sagedustabelit
 table(y)
 
 
@@ -347,7 +346,7 @@ test_predefined_objects("y",undefined_msg = "Oled vektori `y` kustutanud! Alusta
 
 test_object("viimane", undefined_msg = "Objekti `viimane` pole!", incorrect_msg = "Muutuja `viimane` väärus on vale. Proovi uuesti. ?")
 test_output_contains("viimane", incorrect_msg = "Vektor `viimane` pole välja prinditud!")
-test_student_typed(c("y == "tere" | y == "tsau", "!(y == "hommikust" | y == "hei", "(y != "hommikust" & y != "hei")) )
+#test_student_typed(c("y == "tere" | y == "tsau"", "!(y == "hommikust" | y == "hei")", "y != "hommikust" & y != "hei"") )
 
 
 success_msg("Tubli! Viimane ülesanne on tehtud. Premeeri end millegi heaga.")
