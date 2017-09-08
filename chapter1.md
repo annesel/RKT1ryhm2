@@ -55,7 +55,9 @@ x <- 7
 ```{r}
 # esimene
 test_output_contains("3 + 4", times = 1, incorrect_msg = "Oled esimeses ülesandes õige vastuse valeks parandanud. Alusta uuesti!")
-
+test_student_typed("3",  not_typed_msg = "Oled esimeses ülesandes arvu 3 tehtest kustutanud!")
+test_student_typed("4",  not_typed_msg = "Oled esimeses ülesandes arvu 4 tehtest kustutanud!")
+test_student_typed("+",  not_typed_msg = "Liitmiseks asuta siin `+` märki!")
 
 # teine
 test_object("x",  undefined_msg = "Vali muutuja nimeks `x`.",  incorrect_msg = "Omistasid muutujale vale väärtuse. Proovi uuesti!")
