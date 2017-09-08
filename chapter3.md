@@ -7,8 +7,8 @@ description : Kolmas teema - vektorid, väärtuste tüübid
 - Üksikuid arve või tekstiväärtusi saab kokku panna vektoriks funktsiooni `c()` (*combine*) abil. 
 - Veel võimalusi vektorite moodustamiseks:
     * `1:5                 # arvujada 1, 2, 3, 4, 5`
-    * `rep(1:5, times = 2) # vektorit elementidega 1, 2, 3, 4, 5 korrata 2 korda`
-    * `seq(2, 8, by = 2)   # arvujada sammuga 2: 2, 4, 6, 8`
+    * `rep(1:3, times = 2) # vektorit elementidega 1, 2, 3 korrata 2 korda`
+    * `seq(3, 9, by = 2)   # arvujada sammuga 2: 3, 5, 7, 9`
 - Kui teha vektorobjektidega arvtusi, siis tehted tehakse läbi iga vektori elemendiga.
 
 *** =instructions
@@ -49,7 +49,7 @@ Fahrenheit
 # Ülesanne 2. Prindi ekraanile vektor nimega 'lisa'
 
 
-# Ülesanne 3. Moodusta nõutud kujul uus vektor, selleks asenda alakriipsud vajalike suurustega. Prindi tulemus ekraanile.
+# Ülesanne 3. Moodusta nõutud kujul uus vektor, selleks asenda alakriipsud vajalike objektidega. Prindi tulemus ekraanile.
 temp2 <- c(_____, _____) 
 temp2
 
@@ -75,7 +75,7 @@ Fahrenheit
 # Ülesanne 2: Prindi ekraanile vektor nimega 'lisa'
 lisa
 
-# Ülesanne 3: Moodusta nõutud kujul uus vektor, selleks asenda alakriipsud vajalike suurustega. Prindi tulemus ekraanile.
+# Ülesanne 3: Moodusta nõutud kujul uus vektor, selleks asenda alakriipsud vajalike objektidega. Prindi tulemus ekraanile.
 temp2 <- c(temp, lisa) 
 temp2
 ```
@@ -93,7 +93,7 @@ test_output_contains("lisa", incorrect_msg = "Vektor `lisa` pole välja prinditu
 test_object("temp2", undefined_msg = "Puudub vektor `temp2`. Proovi uuesti!", incorrect_msg = "Vektori `temp2` väärtus ei vasta nõutule!")
 test_output_contains("temp2", incorrect_msg = "Vektor `temp2` pole välja prinditud!")
 
-success_msg("Super!")
+success_msg("Super! Liigu järgmise ülesande juurde.")
 
 ```
 
@@ -128,7 +128,7 @@ jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "V
 
 *** =sample_code
 ```{r}
-# Muutujad temp ja jaam on töölaual juba olemas
+# Objektid nimedega temp ja jaam on töölaual juba olemas
 
 # Näide 1. Elementide valimine indeksite kaudu
 temp[ 1 ] # vektori esimene element
@@ -137,9 +137,9 @@ temp[ c(1, 5, 9) ] # vektori esimene, viies ja üheksas element
 
 # Näide 2. Tulemuseks tõeväärtustega vektorid 
 temp < -15 # Kontrollime millised temperatuurid jäävad alla -15 kraadi 
-jaam == "Tallinn"  # Mitmes jaam on Tallinn?
+jaam == "Tallinn"  # Millisel kohal vektoris on ilmajaama nimi Tallinn?
 
-# Näide 3. Tingimustele vastavate elementide väljavalimine
+# Näide 3. Tingimustele vastavate elementide väljavalimine. Tõeväärtusvektori kasutamine
 jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
 temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
 
@@ -165,7 +165,7 @@ temp[ c(1, 5, 9) ] # vektori esimene, viies ja üheksas element
 temp < -15 # Kontrollime millised temperatuurid jäävad alla -15 kraadi. 
 jaam == "Tallinn"  # Mitmes jaam on Tallinn?
 
-# Näide 3. Tingimustele vastavate elementide väljavalimine
+# Näide 3. Tingimustele vastavate elementide väljavalimine. Tõeväärtusvektori kasutamine
 jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
 temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
 
@@ -326,7 +326,7 @@ test_function("is.na",  args = "x", index = 1,
               not_called_msg = "Viimases ülesandes kasuta funktsiooni `is.na()`",
               args_not_specified_msg = NULL,
               incorrect_msg = "Viimases ülesandes on funtsioonile ette antud vale argumendiväärtus. Alusta uuesti.")
-test_object("muutuja3", undefined_msg = "Muutujat `muutuja3` pole!", incorrect_msg = "Kas tegid omistamise kujul `is.na(muutuja3)[1] <- TRUE`?")
+test_object("muutuja3", undefined_msg = "Objekti `muutuja3` pole!", incorrect_msg = "Kas tegid omistamise kujul `is.na(muutuja3)[1] <- TRUE`?")
 
 test_output_contains("muutuja3", incorrect_msg = "Vektor `muutuja3` pole välja prinditud!")
 
