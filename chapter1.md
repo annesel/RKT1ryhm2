@@ -560,11 +560,7 @@ success_msg("Super!")
 Väga sageli on tarvis vektorist kätte saada meile hetkel vajalikku alamosa. Vaatame paari võimalust vektorist elementide välja noppimiseks. 
 
 
-
-
- 
-
-### Juhised
+*** =instructions
  - Tee  näited 1 kuni 3  ükshaaval läbi ja uuri tulemust.
  - **Ülesanne 1:** Vali temperatuurivektorist elemendid, mis on paarisarvulistel kohtadel (paarisarvulise vektori moodustamiseks kasuta funktsiooni `seq()`). Omista saadud alamvektor muutujale `vastus1`. Prindi tulemus ekraanile.
  - **Ülesanne 2:** Vali välja jaamad, kus temperatuur on olnud -17 või alla selle. Kasuta valiku tegemisel tõeväärtusvektorit ja kandilisi sulge `[]`. Omista saadud alamvektor muutujale `vastus2`.  Prindi tulemus ekraanile.
