@@ -6,7 +6,7 @@ description : Esimene teema - kalkulaator, omistamine
 
 Kirjuta kõigi ülesannete lahendused paremal aknapoolel olevasse *script.R* lehele, vastava ülesande sõnastuse alla. Siinses näites on esimese ülesande lahendus juba kirja pandud.
 
-Ühe vastuse väljaarvutamiseks või testimiseks pane hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
+Ühe vastuse väljaarvutamiseks või testimiseks pane *script.R* lehel hiirekursor vastava rea peale ja vajuta klahvikombinatsiooni `Ctrl+Enter`, 
 sellega saadetakse vastav rida allpool olevale R-i konsoolile täitmiseks. Konsooli käsurida võid ka kasutada: kirjuta käsk ning vajuta täitmiseks `Enter`-klahvi. Proovi siin ülesandes need võimalused läbi.
 
 Lahenduse vihjete saamiseks vajuta nuppu `Take Hint`, aga sellega kaotad võimalikke punkte! Kui oled lahti teinud vihjed, siis võid edasi avada ka kogu lahenduse koodi, kuid nii toimides lähevad ülesande punktid nulli.
@@ -57,10 +57,10 @@ x <- 7
 test_output_contains("3 + 4", times = 1, incorrect_msg = "Oled esimeses ülesandes õige vastuse valeks parandanud. Alusta uuesti!")
 test_student_typed("3",  not_typed_msg = "Kontrolli, kas esimese ülesande tehe on kujul `3 + 4`!")
 test_student_typed("4",  not_typed_msg = "Kontrolli, kas esimese ülesande tehe on kujul `3 + 4`!")
-test_student_typed("+",  not_typed_msg = "Kontrolli, kas esimese ülesande tehe on kujul `3 + 4`!")
+ 
 
 # teine
-test_object("x",  undefined_msg = "Vali muutuja nimeks `x`.",  incorrect_msg = "Omistasid muutujale vale väärtuse. Proovi uuesti!")
+test_object("x",  undefined_msg = "Vali muutuja nimeks `x`.",  incorrect_msg = "Omistasid muutujale  `x` vale väärtuse. Proovi uuesti!")
 success_msg("Tubli! Asu nüüd päris ülesandeid lahendama!")
 
 ```
@@ -89,6 +89,7 @@ ja paar funktsiooni:
 - Ruutjuur: `sqrt()`
 - Eksponentfunkstioon `exp()`
 
+**NB!** R teeb vahet suurtel ja väikestel tähtedel. Seega näiteks `sin()` ja `Sin()` viitavad erinevatele funktsioonidele.
 
 
 *** =instructions
@@ -104,9 +105,13 @@ ja paar funktsiooni:
 
 
 *** =hint
+- Pööra tähelepanu tehete järjekorrale.
+- Ruutjuure leidmiseks kasuta funktsiooni `sqrt()` ja naturaallogaritmi leidmiseks funktsiooni `log()`.
+- Viimase tehet saab kirja panna ka nii $ (\ln{3} + 4) : 55$.
 
 *** =pre_exercise_code
 ```{r}
+Sin <- function(x) print("Vahele jäid! Siinuse leidmiseks kasuta ikka funktsiooni sin()")
 
 ```
 
