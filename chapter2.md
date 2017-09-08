@@ -73,6 +73,8 @@ success_msg("Hästi tehtud!")
 ## Muutujate kasutamine tehetes
 
 
+
+
 *** =instructions
 **Lahenda ülesanded:**
 
@@ -82,7 +84,7 @@ success_msg("Hästi tehtud!")
  
 1. Leia arvu $25 \pi$ naturaallogaritm, kasutades muutujat `z`.
 
-1. Arvuta tehte $25 \pi + \frac{1}{25 \pi} - 2^{\frac{25\pi}{19}}$ vastus , kasutades muutujat `z`.
+1. Kasutades muutujat `z`, arvuta tehte $25 \pi + \frac{1}{25 \pi} - 2^{\frac{25\pi}{19}}$ vastus.
 
 
 
@@ -152,6 +154,7 @@ test_function_result(name = "log10",
                      not_called_msg = "Teises ülesandes pead kasutama funktsiooni `log10`",
                      error_msg = "Teises ülesandes on midagi valesti!",
                      incorrect_msg = "Oled funktsioonile `log10` andnud vale väärtusega argumendi")
+test_student_typed("log10(z)", not_typed_msg = "Kas kasutasid teises ülesandes funtksiooni argumendina muutujat `z`?")
 
  
 test_output_contains(expr = "log10(z)",
@@ -180,8 +183,9 @@ test_function_result(name = "log",
 test_output_contains(expr = "log(z)",
                      times = 1,
                      incorrect_msg = "Midagi läks valesti! Kontrolli kolmanda ülesande vastust.")
- 
- 
+
+test_student_typed("log(z)", not_typed_msg = "Kas kasutasid kolmandas ülesandes funtksiooni argumendina muutujat `z`?")
+
  
   
   
@@ -194,7 +198,11 @@ msg_incorrectz = "Kontrolli, kas oled muutujale `z` omistanud õige väärtuse."
 test_output_contains(expr = "z + 1/z - 2^(z/19)",
                      times = 1,
                      incorrect_msg = "Midagi läks valesti! Kontrolli neljanda ülesande tehte kirjapanekut.")
- 
+
+test_student_typed(c("z + 1/z - 2^(z/19)", "z + 1/z - 2**(z/19)",
+                    "1/z + z - 2^(z/19)" , "1/z + z - 2**(z/19)",
+                    "(z^2 +1)/z - 2^(z/19)", "(z^2 +1)/z - 2**(z/19)"), not_typed_msg = "Kas kasutasid viimases ülesandes muutujat `z` arvu &#36;25\pi&#36; asemel?")
+
  
 
 
