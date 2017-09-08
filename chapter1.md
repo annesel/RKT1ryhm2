@@ -55,9 +55,9 @@ x <- 7
 ```{r}
 # esimene
 test_output_contains("3 + 4", times = 1, incorrect_msg = "Oled esimeses ülesandes õige vastuse valeks parandanud. Alusta uuesti!")
-test_student_typed("3",  not_typed_msg = "Oled esimeses ülesandes arvu 3 tehtest kustutanud!")
-test_student_typed("4",  not_typed_msg = "Oled esimeses ülesandes arvu 4 tehtest kustutanud!")
-test_student_typed("+",  not_typed_msg = "Liitmiseks asuta siin `+` märki!")
+test_student_typed("3",  not_typed_msg = "Kontrolli, kas esimese ülesande tehe on kujul `3 + 4`!")
+test_student_typed("4",  not_typed_msg = "Kontrolli, kas esimese ülesande tehe on kujul `3 + 4`!")
+test_student_typed("+",  not_typed_msg = "Kontrolli, kas esimese ülesande tehe on kujul `3 + 4`!")
 
 # teine
 test_object("x",  undefined_msg = "Vali muutuja nimeks `x`.",  incorrect_msg = "Omistasid muutujale vale väärtuse. Proovi uuesti!")
@@ -100,7 +100,7 @@ ja paar funktsiooni:
 
 1. $ (245 - 3^6)^2 $
 
-1. $ \frac{\sqrt{3} + 4}{55}$
+1. $ \frac{\ln{3} + 4}{55}$
 
 
 *** =hint
@@ -138,7 +138,7 @@ ja paar funktsiooni:
 (245 - 3^6)^2 
 
 # Ülesanne 4
-(sqrt(3) + 4) / 55
+(log(3) + 4) / 55
 
 
 ```
@@ -174,16 +174,16 @@ test_output_contains(expr = "25 - 1/4  + 5/9 ",
 # Ül 2
 test_output_contains(expr = "(sqrt(3) + 4) / 5",
                     times = 1,
-                    incorrect_msg = "Midagi on teises ülesandes valesti! Kontrolli tehete järjekorda. Ruutjuure leidmiseks kasuta `sqrt(3)`.")
+                    incorrect_msg = "Midagi on teises ülesandes valesti! Kontrolli tehete järjekorda. Ruutjuure leidmiseks kasuta: `sqrt(3)`.")
 # ÜL 3
 test_output_contains(expr = "(245 - 3^6)^2 ",
                      times = 1,
                      incorrect_msg = "Midagi on komandas ülesandes valesti! Kontrolli tehete järjekorda. Astendamiseks kasuta märki `^` või `**`.")
  
 # Ül 4
-test_output_contains(expr = "(sqrt(3) + 4) / 55",
+test_output_contains(expr = "(log(3) + 4) / 55",
                      times = 1,
-                     incorrect_msg = "Midagi on viimases ülesandes valesti! Kontrolli tehete järjekorda. Ruutjuure leidmiseks kasuta `sqrt(3)`.")
+                     incorrect_msg = "Midagi on viimases ülesandes valesti! Kontrolli tehete järjekorda. Naturaallogaritmi leidmiseks kasuta `log(3)`.")
  
 success_msg("Hästi! Mine edasi järgmise ülesande juurde.")
 
@@ -210,9 +210,6 @@ R-is võivad muutujate nimed sisaldada suuri ja väikesi tähti, numbreid, punkt
 
 1. Arvuta tehte $25 \pi + \frac{1}{25 \pi} - 2^{\frac{25\pi}{20}}$ vastus , kasutades muutujat `z`.
 
-1. Moodusta vektor `w`, milles on arvud $1, 2, \ldots, 250$.
-
-1. Liida arvud ühest kuni 250-ni: $\sum_{i=1}^{250} i$, kasutades eelnevalt defineeritud vektorit $w$.
 
 
 
@@ -242,12 +239,6 @@ R-is võivad muutujate nimed sisaldada suuri ja väikesi tähti, numbreid, punkt
 # Leia tehte vastus, kasutades muuutujat z
 
 
-# Moodusta vektor w, milles on arvud 1, 2, ..., 250
-
-
-# Liida arvud ühest kuni 250-ni, kasutades eelnevalt defineeritud vektorit w
-
-
 
 
 ```
@@ -266,12 +257,6 @@ log(z)
 # Leia tehte vastus
 z + 1/z - 2^(z/20)
 
-
-# Moodusta vektor w, milles on arvud 1, 2, ..., 250
-w <- 1:250
-
-# Liida arvud ühest kuni 250-ni, kasutades eelnevalt defineeritud vektorit w
-sum(w)
 
 
 
@@ -338,34 +323,7 @@ test_output_contains(expr = "z + 1/z - 2^(z/20)",
 
   
   
-  
-# neljas
-msg_undefinedw = "Kontrolli, kas oled defineerinud muutuja `w`."
-msg_incorrectw = "Kontrolli, kas oled muutujale `w` omistanud õige väärtuse."
-test_object("w",  
-            undefined_msg = msg_undefinedw,
-            incorrect_msg = msg_incorrectw) 
 
-
-
-
-
-# viies
-test_function_result(name = "sum",
-                     index = 1,
-                     eq_condition = "equivalent",
-                     not_called_msg = "Viimases ülesandes peaksid kasutama funktsiooni `sum`",
-                     error_msg = "Viimases ülesandes on midagi valesti!",
-                     incorrect_msg = "Oled funktsioonile `sum` andnud vale argumendi")
-
-  
-  
-test_output_contains(expr = "sum(w)",
-                     times = 1,
-                     incorrect_msg = "Midagi läks valesti! Kontrolli viimase ülesande vastust.")
- 
- 
- 
 
 
 success_msg("Tubli!")
@@ -466,9 +424,9 @@ success_msg("Hästi tehtud! Suundu järgmise harjutuse juurde!")
 
 *** =instructions
 - Tee läbi näited 1 kuni 3.
-- **Ülesanne 1.** Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale ($F^o = C^o \frac{9}{5} + 32$). Omista tulemus muutujale `Fahrenheit`.
+- **Ülesanne 1.** Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale ($F^o = C^o \frac{9}{5} + 32$). Omista tulemus muutujale `Fahrenheit` ja prindi see ekraanile.
 - **Ülesanne 2.** Vektoris `lisa` on veel kaks õhutemperatuuri($C^o$). Prindi see vektor ekraanile.
-- **Ülesanne 3.** Kasutades funkstiooni `c()` moodusta vektor nimega `temp2`, mille esimesed 9 elementi  on temperatuurid vektorist `temp` ja järgmised 2 temperatuurid vektroist `lisa`. Väljasta tulemus ekraanile.
+- **Ülesanne 3.** Kasutades funkstiooni `c()` moodusta vektor nimega `temp2`, mille esimesed 9 elementi  on temperatuurid vektorist `temp` ja järgmised 2 temperatuurid vektorist `lisa`. Väljasta tulemus ekraanile.
 
 
 *** =hint
