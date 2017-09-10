@@ -292,9 +292,10 @@ Omista vektor muutujale `viimane`, prindi see ekraanile. Vektori `y` väärtuste
 
 *** =hint
 - Vastuse kirjapanekuks on siin mitu võimalust. 
-- Tere **või** tsau
-- (**Ei** ole hei)  **ja** (**ei** ole hommikust)
--  **Ei** ole (hei **või** hommikust)
+
+    - Tere **või** tsau
+    - (**Ei** ole hei)  **ja** (**ei** ole hommikust)
+    -  **Ei** ole (hei **või** hommikust)
 
 *** =pre_exercise_code
 ```{r}
@@ -345,7 +346,7 @@ viimane
 ```{r}
 test_predefined_objects("y",undefined_msg = "Oled vektori `y` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `y` väärtused on muudetud! Alusta uuesti")
 
-test_object("viimane", undefined_msg = "Objekti `viimane` pole!", incorrect_msg = "Muutuja `viimane` väärus on vale. Proovi uuesti. ?")
+test_object("viimane", undefined_msg = "Objekti `viimane` pole!", incorrect_msg = "Muutuja `viimane` väärus on vale. Proovi uuesti. Kontrolli  ka tekstiväärtuste kirjapanek üle, ega 'hei' asemel pole näiteks 'hie'?")
 test_output_contains("viimane", incorrect_msg = "Vektor `viimane` pole välja prinditud!")
 #test_student_typed(c("y == "tere" | y == "tsau"", "!(y == "hommikust" | y == "hei")", "y != "hommikust" & y != "hei"") )
 
