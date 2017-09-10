@@ -13,8 +13,8 @@ description : Kolmas teema - vektorid, väärtuste tüübid
 
 *** =instructions
 - Tee läbi näited 1 kuni 3.
-- **Ülesanne 1.** Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale ($F^o = C^o \frac{9}{5} + 32$). Omista tulemus muutujale `Fahrenheit` ja prindi see ekraanile.
-- **Ülesanne 2.** Vektoris `lisa` on veel kaks õhutemperatuuri($C^o$). Prindi see vektor ekraanile.
+- **Ülesanne 1.** Teisenda temperatuurid celsiuse skaalalt fahrenheiti skaalale ($^\circ\hspace{-0.1em} F = ^\circ\hspace{-0.1em} C \times \frac{9}{5} + 32$). Omista tulemus muutujale `Fahrenheit` ja prindi see ekraanile.
+- **Ülesanne 2.** Vektoris `lisa` on veel kaks õhutemperatuuri($^\circ\hspace{-0.1em} C$). Prindi see vektor ekraanile.
 - **Ülesanne 3.** Kasutades funkstiooni `c()` moodusta vektor nimega `temp2`, mille esimesed 9 elementi  on temperatuurid vektorist `temp` ja järgmised 2 temperatuurid vektorist `lisa`. Väljasta tulemus ekraanile.
 
 
@@ -129,6 +129,7 @@ jaam <- c("Ruhnu", "Kihnu", "Pakri", "Tallinn", "Pärnu", "Kunda", "Kuusiku", "V
 *** =sample_code
 ```{r}
 # Objektid nimedega temp ja jaam on töölaual juba olemas
+temp; jaam
 
 # Näide 1. Elementide valimine indeksite kaudu
 temp[ 1 ] # vektori esimene element
@@ -144,18 +145,21 @@ jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
 temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
 
 
-# Ülesanne 1: Vali nõutud elemendid temperatuurivektorist, omista tulemus muutujale 'vastus1'. Prindi tulemus ekraanile
+# Ülesanne 1: Vali nõutud elemendid temperatuurivektorist, omista tulemus muutujale vastus1. Prindi tulemus ekraanile
 vastus1 <- temp[_______]
 vastus1
 
 
-# Ülesanne 2: Vali välja tingimusele vastavad ilmajaamade nimed, omista tulemus muutujale 'vastus2'. Prindi tulemus ekraanile
+# Ülesanne 2: Vali välja tingimusele vastavad ilmajaamade nimed, omista tulemus muutujale vastus2. Prindi tulemus ekraanile
 vastus2 <- ________
 vastus2
 ```
 
 *** =solution
 ```{r}
+# Objektid nimedega temp ja jaam on töölaual juba olemas
+temp; jaam
+
 # Näide 1
 temp[ 1 ] # vektori esimene element
 temp[ -1 ] # vektori kõik elemendid va esimene
@@ -170,12 +174,12 @@ jaam[ temp < -15 ] # valime välja need  jaamad, kus temperatuur on alla -15
 temp[jaam == "Tallinn"]  # valime välja Tallinnale vastava temperatuuri
 
 
-# Ülesanne 1: Vali nõutud elemendid temperatuurivektorist, omista tulemus muutujale 'vastus1'. Prindi tulemus ekraanile
+# Ülesanne 1: Vali nõutud elemendid temperatuurivektorist, omista tulemus muutujale vastus1. Prindi tulemus ekraanile
 vastus1 <- temp[seq(2, 9, 2)]
 vastus1
 
 
-# Ülesanne 2: Vali välja tingimusele vastavad ilmajaamade nimed, omista tulemus muutujale 'vastus2'. Prindi tulemus ekraanile
+# Ülesanne 2: Vali välja tingimusele vastavad ilmajaamade nimed, omista tulemus muutujale vastus2. Prindi tulemus ekraanile
 vastus2 <- jaam[temp <= -17]
 vastus2
 
