@@ -27,7 +27,7 @@ Tüübi kontroll, teisendamine
 *** =instructions
 
 - Vaata üle millised vektorid etteantud koodi alguses moodustatakse.
-- **Ülesanne 1**: Kontrolli, kas vektor `muutuja1` on loogilist tüüpi. Täienda etteantud koodi, pannes kirja kontrolliks sobiva funktsiooni nime.
+- **Ülesanne 1**: Kontrolli, kas vektor `muutuja1` on Tõeväärtusvektor. Täienda etteantud koodi, pannes kirja kontrolliks sobiva funktsiooni nime.
 - **Ülesanne 2**: Rakenda funktsiooni `is.nan()` teisele moodustatud vektroile `muutuja2`. Pane tähele, et funktsiooni tulemus on ka vektor.
 - **Ülesanne 3**: Asenda vektoris `muutuja3` esimene element tühikuga, kasutades funktsiooni `is.na()` abi. Prindi muudetud vektor ekraanile.
 
@@ -51,7 +51,7 @@ muutuja1; muutuja2; muutuja3
 
 
 
-# Ülesanne 1: Kontrolli kas vektor muutuja1 on loogilist tüüpi(asenda alakriipis sobiva sõnega, et moodustuks õige funktsiooni nimi).
+# Ülesanne 1: Kontrolli kas vektor muutuja1 on tõeväärtusvektor (asenda alakriipis sobiva sõnega, et moodustuks õige funktsiooni nimi).
 is.______(muutuja1)
 
 # Ülesanne 2: Rakenda funktsiooni is.nan() vektorile muutuja2.
@@ -127,7 +127,7 @@ success_msg("Tubli töö!")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:e6061d1945
-## Tõeväärtused 1
+## Veel tõeväärtustest 1
 
 Tõeväärtuseid on kaks: `TRUE` ja `FALSE`. R saab aru ka lühenditest `T` ja `F`.
 
@@ -159,6 +159,8 @@ Loogilisi tehteid on kolm
 
 
 *** =hint
+- Sobiv tehe on korrutamine (`&`).
+
 
 *** =pre_exercise_code
 ```{r}
@@ -168,13 +170,13 @@ Loogilisi tehteid on kolm
 *** =sample_code
 ```{r}
 # antud on vektor x
-x <- c(34, 23, 45, 67, 10, 21)
+x <- c(34, 23, 45, 67, 10, 21, 37)
 
-#Näide 1: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui `x` väärtused on suuremad kui 50. Prindime ekraanile
+#Näide 1: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui x väärtused on suuremad kui 50. Prindime ekraanile
 x1 <- x > 50
 x1
 
-#Näide 2: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui  `x` väärtused on  väiksemad kui 20. Prindime ekraanile
+#Näide 2: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui  x väärtused on  väiksemad kui 20. Prindime ekraanile
 x2 <- x < 20
 x2
 
@@ -183,17 +185,17 @@ x3 <- x1 | x2 # loogiline tehe 'või'
 x3
 
 
-#Ülesanne 1: Väärtusta tõeväärtusvektor x4, mis näitab, millised x väärtused on suuremad kui 30. Prindi x4 ekraanile
+#Ülesanne 1: Väärtusta tõeväärtusvektor x4. Prindi x4 ekraanile
 x4 <- _________________
 x4
 
 
-#Ülesanne 2: Moodusta tõeväärtusvektor vektor x5, mis näitab, millised x väärtused on väiksemad kui 40. Prindi x5 ekraanile
+#Ülesanne 2: Moodusta tõeväärtusvektor vektor x5. Prindi  ekraanile
 x5 <- _________________
 x5
 
 
-#Ülesanne 3: Moodusta tõeväärtusvektor x6, mis näitab, millised x väärtused on vahemikus 30 kuni 40. Kasutades vektoreid x4 ja x5 ning sobivat loogilist tehet. Prindi x6 ekraanile
+#Ülesanne 3: Moodusta tõeväärtusvektor x6 kasutades vektoreid x4 ja x5 ning sobivat loogilist tehet. Prindi tulemus ekraanile
 x6 <- ________ __ __________
 x6
 
@@ -206,13 +208,13 @@ x6
 *** =solution
 ```{r}
 # antud on vektor x
-x <- c(34, 23, 45, 67, 10, 21)
+x <- c(34, 23, 45, 67, 10, 21, 37)
 
-#Näide 1: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui `x` väärtused on suuremad kui 50. Prindime ekraanile
+#Näide 1: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui x` väärtused on suuremad kui 50. Prindime ekraanile
 x1 <- x > 50
 x1
 
-#Näide 2: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui  `x` väärtused on  väiksemad kui 20. Prindime ekraanile
+#Näide 2: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui  x väärtused on  väiksemad kui 20. Prindime ekraanile
 x2 <- x < 20
 x2
 
@@ -221,17 +223,17 @@ x3 <- x1 | x2 # loogiline tehe 'või'
 x3
 
 
-#Ülesanne 1: Väärtusta tõeväärtusvektor x4, mis näitab, millised x väärtused on suuremad kui 30. Prindi x4 ekraanile
+#Ülesanne 1: Väärtusta tõeväärtusvektor x4. Prindi x4 ekraanile
 x4 <- x > 30
 x4
 
 
-#Ülesanne 2: Moodusta tõeväärtusvektor vektor x5, mis näitab, millised x väärtused on väiksemad kui 40. Prindi x5 ekraanile
+#Ülesanne 2: Moodusta tõeväärtusvektor vektor x5. Prindi  ekraanile
 x5 <- x < 40
 x5
 
 
-#Ülesanne 3: Moodusta tõeväärtusvektor x6, mis näitab, millised x väärtused on vahemikus 30 kuni 40. Kasutades vektoreid x4 ja x5 ning sobivat loogilist tehet. Prindi x6 ekraanile
+#Ülesanne 3: Moodusta tõeväärtusvektor x6 kasutades vektoreid x4 ja x5 ning sobivat loogilist tehet. Prindi tulemus ekraanile
 x6 <- x4 & x5
 x6
 ```
@@ -262,7 +264,7 @@ success_msg("Tubli! Järgmine ülesanne on viimane.")
 
 
 --- type:NormalExercise lang:r xp:100 skills:1 key:1bc0bcb89e
-## Tõeväärtused 2
+## Veel tõeväärtustest 2
 
 Tõeväärtuseid on kaks: `TRUE` ja `FALSE`. R saab aru ka lühenditest `T` ja `F`.
 
@@ -287,7 +289,7 @@ Loogilisi tehteid on kolm
 
 *** =instructions
 - Tee läbi näide.
-- **Ülesanne**  Leia tõevektor, mis näitaks millised vektori `y` väärtused vastavad sõnele "tere" või "tsau". Kasuta loogilise tehte kirjapanekul analoogiat näitega. 
+- **Ülesanne**  Leia tõevektor, mis näitaks millised vektori `y` väärtused vastavad sõnele "tere" või "tsau".  
 Omista vektor muutujale `viimane`, prindi see ekraanile. Vektori `y` väärtustest saad ülevaate sagedustabeli `table(y)` abil.
 
 *** =hint
@@ -313,11 +315,11 @@ abc != "c"  # täht ei ole 'c'
 !(abc == "c")  # eitame väidet, et täht on 'c'
 
 
-# Ülesandes on uurimise all tekstiväärtustega vektor 'y', vaata selle väärtuste sagedustabelit
+# Ülesandes on uurimise all tekstiväärtustega vektor y, vaata selle väärtuste sagedustabelit
 table(y)
 
 
-# Ülesanne: Leia tõevektor, mis näitaks millised vektori 'y' väärtused vastavad sõnele "tere" või "tsau". Kasuta analoogiat näitega. Omista vektor muutujale 'viimane', prindi see ekraanile.
+# Ülesanne: Leia tõevektor, mis näitaks millised vektori y väärtused vastavad sõnele "tere" või "tsau".  Omista vektor muutujale viimane, prindi see ekraanile.
 
  
 ```
@@ -332,11 +334,11 @@ abc != "c"  # täht ei ole 'c'
 !(abc == "c")  # eitame väidet, et täht on 'c'
 
 
-# Ülesandes on uurimise all vektor 'y', vaata selle väärtuste sagedustabelit
+# Ülesandes on uurimise all vektor y, vaata selle väärtuste sagedustabelit
 table(y)
 
 
-# Ülesanne: Leia tõevektor, mis näitaks millised vektori 'y' väärtused vastavad sõnele "tere" või "tsau". Kasuta analoogiat näitega. Omista vektor muutujale 'viimane', prindi see ekraanile.
+# Ülesanne: Leia tõevektor, mis näitaks millised vektori 'y' väärtused vastavad sõnele "tere" või "tsau".  Omista vektor muutujale viimane, prindi see ekraanile.
 viimane <- y == "tere" | y == "tsau"
 viimane
 
