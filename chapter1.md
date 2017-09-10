@@ -71,7 +71,7 @@ success_msg("Tubli! Asu nüüd päris ülesandeid lahendama!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:0f25fc4161
 ## Arvutamine
 
-Esmalt mõned lihtsad arvutusülesanded. 
+Esmalt mõned arvutusülesanded. 
 
 Meeldetuletuseks tehtemärgid:
 
