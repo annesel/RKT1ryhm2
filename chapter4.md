@@ -242,17 +242,17 @@ test_predefined_objects("x", undefined_msg = "Oled vektori `x` kustutanud! Alust
 
 test_object("x4", undefined_msg = "Objekti `x4` pole!", incorrect_msg = "Kas tegid võrdluse kujul `x > 30` ?")
 test_output_contains("x4", incorrect_msg = "Vektor `x4` pole välja prinditud!")
-test_student_typed(c("x>30", "30<x"), "Kasuta võrdluste tegemisel märke `>` ja `<`.")
+test_student_typed(c("x>30", "30<x"), not_typed_msg = "Kasuta võrdluste tegemisel märke `>` ja `<`.")
 
 
 test_object("x5", undefined_msg = "Objekti `x5` pole!", incorrect_msg = "Kas tegid võrdluse kujul `x < 40` ?")
 test_output_contains("x4", incorrect_msg = "Vektor `x4` pole välja prinditud!")
-test_student_typed(c("x<40", "40>x"), "Kasuta võrdluste tegemisel märke `>` ja `<`.")
+test_student_typed(c("x<40", "40>x"), not_typed_msg = "Kasuta võrdluste tegemisel märke `>` ja `<`.")
 
 
 test_object("x6", undefined_msg = "Objekti `x6` pole!", incorrect_msg = "Kas tegid tehte kujul  `x4 & x5` ?")
 test_output_contains("x6", incorrect_msg = "Vektor `x6` pole välja prinditud!")
-test_student_typed(c("x4 & x5", "!(!x4 | !x5)"), "Kas tegid tehte kujul  `x4 & x5` ?")
+test_student_typed(c("x4 & x5", "!(!x4 | !x5)"), not_typed_msg = "Kas tegid tehte kujul  `x4 & x5` ?")
 
 
 success_msg("Tubli! Järgmine ülesanne on viimane.")
