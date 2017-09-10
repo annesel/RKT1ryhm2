@@ -1,5 +1,5 @@
 ---
-title       : Esimene kodutöö - osa 1
+title       : R kui kalkulaator
 description : Esimene teema - kalkulaator, omistamine
 --- type:NormalExercise lang:r xp:0 skills:1 key:07547c77c0
 ## Sissejuhatus

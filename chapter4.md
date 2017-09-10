@@ -1,5 +1,5 @@
 ---
-title       : Esimene kodutöö - osa 4
+title       : Väärtuste tüübid
 description : Neljas teema - väärtuste tüübid, tõeväärtused
 --- type:NormalExercise lang:r xp:100 skills:1 key:bcc48c5aea
 ## Väärtuste tüübid. Puuduvad väärtused

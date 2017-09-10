@@ -1,5 +1,5 @@
 ---
-title       : Esimene kodutöö - osa 2
+title       : Muutujate kasutamine
 description : Teine teema - muutujad
 --- type:NormalExercise lang:r xp:100 skills:1 key:051769665f
 ## Muutujad 

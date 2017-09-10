@@ -1,5 +1,5 @@
 ---
-title       : Esimene kodutöö - osa 3
+title       : Vektorite loomine, elementide valik
 description : Kolmas teema - vektorid
 --- type:NormalExercise lang:r xp:100 skills:1 key:fead53a9da
 ## Vektorid 1
