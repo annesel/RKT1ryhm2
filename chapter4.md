@@ -1,6 +1,6 @@
 ---
 title       : Esimene kodutöö - osa 4
-description : Väärtuste tüübid, tõeväärtused
+description : Neljas teema - väärtuste tüübid, tõeväärtused
 --- type:NormalExercise lang:r xp:100 skills:1 key:bcc48c5aea
 ## Väärtuste tüübid. Puuduvad väärtused
 R-is on põhilised väärtuste tüübid, mida kasutame:
