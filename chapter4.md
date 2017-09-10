@@ -151,10 +151,10 @@ Loogilisi tehteid on kolm
 
 
 *** =instructions
-- Tee läbi näited 1 kuni 4.
-- **Ülesanne 1.**  Väärtusta loogiline vektor, mis näitab, millised `x` väärtused on suuremad kui 30. Omista tulemus muutujale `x4` ja prindi see ekraanile.
-- **Ülesanne 2.** Väärtusta loogiline vektor, mis näitab, millised `x` väärtused on  väiksemad kui 40. Omista tulemus muutujale `x5` ja prindi see ekraanile.
-- **Ülesanne 3.** Väärtusta loogiline vektor `x6`, mis näitab, millised  `x` väärtused on vahemikus 30 kuni 40, kasutades vektoreid  `x4` ja  `x5` ning sobivat loogilist tehet (`|`, `&`, `!`). Prindi `x6` ekraanile.
+- Tee läbi näited 1 kuni 3.
+- **Ülesanne 1.**  Väärtusta tõeväärtusvektor, mille elementide väärtus on `TRUE`, kui `x` väärtused on suuremad kui 30 (`FALSE` vastasel juhul). Omista tulemus muutujale `x4` ja prindi see ekraanile.
+- **Ülesanne 2.** Moodusta tõeväärtusvektor, mille elementide väärtus on `TRUE`, kui  `x` väärtused on  väiksemad kui 40  (`FALSE` vastasel juhul). Omista tulemus muutujale `x5` ja prindi see ekraanile.
+- **Ülesanne 3.** Moodusta tõeväärtusvektor `x6`, mille elementide väärtus on `TRUE`, kui  `x` väärtused on vahemikus 30 kuni 40  (`FALSE` vastasel juhul), kasutades vektoreid  `x4` ja  `x5` ning sobivat loogilist tehet (`|`, `&`, `!`). Prindi `x6` ekraanile.
 
 
 
@@ -170,30 +170,30 @@ Loogilisi tehteid on kolm
 # antud on vektor x
 x <- c(34, 23, 45, 67, 10, 21)
 
-#Näide 1: Väärtustame loogilise vektori, mis näitab, millised x väärtused on suuremad kui 50. Prindime ekraanile
+#Näide 1: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui `x` väärtused on suuremad kui 50. Prindime ekraanile
 x1 <- x > 50
 x1
 
-#Näide 2: Väärtustame loogilise vektori, mis näitab, millised x väärtused on alla 20. Prindime ekraanile
+#Näide 2: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui  `x` väärtused on  väiksemad kui 20. Prindime ekraanile
 x2 <- x < 20
 x2
 
-#Näide 3: Väärtustame loogilise vektori, mis näitab, millised x väärtused on alla 20 või üle 50. Prindime ekraanile
+#Näide 3: Moodustame tõeväärtusvektori, mis näitab, millised x väärtused on alla 20 või üle 50. Prindime ekraanile
 x3 <- x1 | x2 # loogiline tehe 'või'
 x3
 
 
-#Ülesanne 1: Väärtusta loogiline vektor x4, mis näitab, millised x väärtused on suuremad kui 30. Prindi x4 ekraanile
+#Ülesanne 1: Väärtusta tõeväärtusvektor x4, mis näitab, millised x väärtused on suuremad kui 30. Prindi x4 ekraanile
 x4 <- _________________
 x4
 
 
-#Ülesanne 2: Väärtusta loogiline vektor x5, mis näitab, millised x väärtused on väiksemad kui 40. Prindi x5 ekraanile
+#Ülesanne 2: Moodusta tõeväärtusvektor vektor x5, mis näitab, millised x väärtused on väiksemad kui 40. Prindi x5 ekraanile
 x5 <- _________________
 x5
 
 
-#Ülesanne 3: Väärtusta loogiline vektor x6, mis näitab, millised x väärtused on vahemikus 30 kuni 40, kasutades vektoreid x4 ja x5 ning sobivat loogilist tehet. Prindi x6 ekraanile
+#Ülesanne 3: Moodusta tõeväärtusvektor x6, mis näitab, millised x väärtused on vahemikus 30 kuni 40. Kasutades vektoreid x4 ja x5 ning sobivat loogilist tehet. Prindi x6 ekraanile
 x6 <- ________ __ __________
 x6
 
@@ -206,42 +206,39 @@ x6
 *** =solution
 ```{r}
 # antud on vektor x
-x <- c(34, 23, 45, 67, 10, 37)
+x <- c(34, 23, 45, 67, 10, 21)
 
-#Näide 1: Väärtustame loogilise vektori, mis näitab, millised x väärtused on suuremad kui 50. Prindime ekraanile
+#Näide 1: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui `x` väärtused on suuremad kui 50. Prindime ekraanile
 x1 <- x > 50
 x1
 
-#Näide 2: Väärtustame loogilise vektori, mis näitab, millised x väärtused on alla 20. Prindime ekraanile
+#Näide 2: Väärtustame tõeväärtusvektori, mille elementide väärtus on `TRUE`, kui  `x` väärtused on  väiksemad kui 20. Prindime ekraanile
 x2 <- x < 20
 x2
 
-#Näide 3: Väärtustame loogilise vektori, mis näitab, millised x väärtused on alla 20 või üle 50. Prindime ekraanile
+#Näide 3: Moodustame tõeväärtusvektori, mis näitab, millised x väärtused on alla 20 või üle 50. Prindime ekraanile
 x3 <- x1 | x2 # loogiline tehe 'või'
 x3
 
-#Näide 4: Eituse kirjapanek
-!x3
 
-
-#Ülesanne 1: Väärtusta loogiline vektor x4, mis näitab, millised x väärtused on suuremad kui 30. Prindi x4 ekraanile
+#Ülesanne 1: Väärtusta tõeväärtusvektor x4, mis näitab, millised x väärtused on suuremad kui 30. Prindi x4 ekraanile
 x4 <- x > 30
 x4
 
 
-#Ülesanne 2: Väärtusta loogiline vektor x5, mis näitab, millised x väärtused on väiksemad kui 40. Prindi x5 ekraanile
+#Ülesanne 2: Moodusta tõeväärtusvektor vektor x5, mis näitab, millised x väärtused on väiksemad kui 40. Prindi x5 ekraanile
 x5 <- x < 40
 x5
 
 
-#Ülesanne 3: Väärtusta loogiline vektor x6, mis näitab, millised x väärtused on vahemikus 30 kuni 40, kasutades vektoreid x4 ja x5 ning sobivat loogilist tehet. Prindi x6 ekraanile
+#Ülesanne 3: Moodusta tõeväärtusvektor x6, mis näitab, millised x väärtused on vahemikus 30 kuni 40. Kasutades vektoreid x4 ja x5 ning sobivat loogilist tehet. Prindi x6 ekraanile
 x6 <- x4 & x5
 x6
 ```
 
 *** =sct
 ```{r}
-test_predefined_objects("x",undefined_msg = "Oled vektori `x` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `x` väärtused on muudetud! Alusta uuesti")
+test_predefined_objects("x", undefined_msg = "Oled vektori `x` kustutanud! Alusta uuesti.", incorrect_msg = "Muutuja `x` väärtused on muudetud! Alusta uuesti")
 
 test_object("x4", undefined_msg = "Objekti `x4` pole!", incorrect_msg = "Kas tegid võrdluse kujul `x > 30` ?")
 test_output_contains("x4", incorrect_msg = "Vektor `x4` pole välja prinditud!")
