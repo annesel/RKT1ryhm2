@@ -291,6 +291,10 @@ Loogilisi tehteid on kolm
 Omista vektor muutujale `viimane`, prindi see ekraanile. Vektori `y` väärtustest saad ülevaate sagedustabeli `table(y)` abil.
 
 *** =hint
+- Vastuse kirjapanekuks on siin mitu võimalust. 
+- Tere **või** tsau
+- (**Ei** ole hei)  **ja** (**ei** ole hommikust)
+-  **Ei** ole (hei **või** hommikust)
 
 *** =pre_exercise_code
 ```{r}
@@ -303,35 +307,35 @@ y <- sample(rep(c("tere", "hei", "tsau", "hommikust"), times = kordused), size =
 # Näide: vaatame tähestiku algust, moodustame kolme moodi tõevektori, mille väärtus on TRUE, kui täht on a või b ning on FALSE vastasel korral
 abc <- letters[1:3]
 abc
-abc == "a" | abc == "b"
-abc != "c"
-!(abc == "c")
+abc == "a" | abc == "b" # täht on 'a' või täiht on 'b'
+abc != "c"  # täht ei ole 'c'
+!(abc == "c")  # eitame väidet, et täht on 'c'
 
 
-# Ülesandes on uurimise all tekstiväärtustega vektor y, vaata selle väärtuste sagedustabelit
+# Ülesandes on uurimise all tekstiväärtustega vektor 'y', vaata selle väärtuste sagedustabelit
 table(y)
 
 
-# Ülesanne: Leia tõevektor, mis näitaks millised vektori y väärtused vastavad sõnele "tere" või "tsau". Kasuta analoogiat näitega. Omista vektor muutujale 'viimane', prindi see ekraanile.
+# Ülesanne: Leia tõevektor, mis näitaks millised vektori 'y' väärtused vastavad sõnele "tere" või "tsau". Kasuta analoogiat näitega. Omista vektor muutujale 'viimane', prindi see ekraanile.
 
  
 ```
 
 *** =solution
 ```{r}
-# Näide: vaatame tähestiku algust, moodustame kolme moodi tõevektori, mille väärtus on TRUE, kui täht on a või b ning on FALSE vastasel korral
+# Näide: vaatame tähestiku algust, moodustame kolme moodi tõevektori, mille väärtus on TRUE, kui täht on 'a' või 'b' ning on FALSE vastasel korral
 abc <- letters[1:3]
 abc
-abc == "a" | abc == "b"
-abc != "c"
-!(abc == "c")
+abc == "a" | abc == "b" # täht on 'a' või täiht on 'b'
+abc != "c"  # täht ei ole 'c'
+!(abc == "c")  # eitame väidet, et täht on 'c'
 
 
-# Ülesandes on uurimise all vektor y, vaata selle väärtuste sagedustabelit
+# Ülesandes on uurimise all vektor 'y', vaata selle väärtuste sagedustabelit
 table(y)
 
 
-# Ülesanne: Leia tõevektor, mis näitaks millised vektori y väärtused vastavad sõnele "tere" või "tsau". Kasuta analoogiat näitega. Omista vektor muutujale 'viimane', prindi see ekraanile.
+# Ülesanne: Leia tõevektor, mis näitaks millised vektori 'y' väärtused vastavad sõnele "tere" või "tsau". Kasuta analoogiat näitega. Omista vektor muutujale 'viimane', prindi see ekraanile.
 viimane <- y == "tere" | y == "tsau"
 viimane
 
