@@ -236,32 +236,32 @@ Veendu, et oled muutnud koodi nii, et muutujale `poisse` omistatakse arvuline v�
 
 *** =sample_code
 ```{r}
-# Näide 1: omistame muutujale `x` väärtuseks  teksti "Tere maailm!" ja väljastame selle
+# Näide 1: omistame muutujale x väärtuseks  teksti "Tere maailm!" ja väljastame selle
 x <- "Tere maailm!"
 x
 
 # Näide 2: tekstide ühendamine, eri võimalusi
 poisse <- "kolm"
-tydrukuid <- "2"
+tydrukuid <- 2
 paste(poisse, "ja", tydrukuid)
 paste(poisse, tydrukuid)
 paste(poisse, tydrukuid, sep = "")
 
 # Näide 3: tekste ei saa liita, tulemuseks on veateade.
 poisse <- "kolm"
-tydrukuid <- "2"
+tydrukuid <- 2
 lapsi <- poisse + tydrukuid
 ```
 
 *** =solution
 ```{r}
-# Näide 1: omistame muutujale `x` väärtuseks  teksti "Tere maailm!" ja väljastame selle
+# Näide 1: omistame muutujale x väärtuseks  teksti "Tere maailm!" ja väljastame selle
 x <- "Tere maailm!"
 x
 
 # Näide 2: tekstide ühendamine, eri võimalusi
 poisse <- "kolm"
-tydrukuid <- "2"
+tydrukuid <-  2
 paste(poisse, "ja", tydrukuid)
 paste(poisse, tydrukuid)
 paste(poisse, tydrukuid, sep = "")
