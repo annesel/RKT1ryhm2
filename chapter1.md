@@ -107,7 +107,6 @@ ja paar funktsiooni:
 *** =hint
 - Pööra tähelepanu tehete järjekorrale.
 - Ruutjuure leidmiseks kasuta funktsiooni `sqrt()` ja naturaallogaritmi leidmiseks funktsiooni `log()`.
-- Viimase tehet saab kirja panna ka nii $ (\ln{3} + 4) : 55$.
 
 *** =pre_exercise_code
 ```{r}

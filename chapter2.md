@@ -72,7 +72,7 @@ success_msg("Hästi tehtud!")
 --- type:NormalExercise lang:r xp:100 skills:1 key:fe30c44601
 ## Muutujate kasutamine tehetes
 
-
+Kui muutuja on väärtustatud, siis edasistes arvutustes võiks muutujat kasutada selle arvu, avaldise, vektori vms asemel, mida ta tähistab.
 
 
 *** =instructions
@@ -91,7 +91,7 @@ success_msg("Hästi tehtud!")
 
 
 *** =hint
-- Logaritmifunktsiooni abilehe saad avada kui kirjutad konsoolile `?log` ja vajutad enter-klahvi.
+- Logaritmfunktsiooni abilehe saad avada kui kirjutad konsoolile `?log` ja vajutad enter-klahvi.
 - Kui sul tekkisid probleemid astendamismärgi `^` leidmisega, siis kasuta selle asemel `**`. 
 
 
