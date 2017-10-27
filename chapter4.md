@@ -310,7 +310,7 @@ y <- sample(rep(c("tere", "hei", "tsau", "hommikust"), times = kordused), size =
 # Näide: vaatame tähestiku algust, moodustame kolme moodi tõevektori, mille väärtus on TRUE, kui täht on a või b ning on FALSE vastasel korral
 abc <- letters[1:3]
 abc
-abc == "a" | abc == "b" # täht on 'a' või täiht on 'b'
+abc == "a" | abc == "b" # täht on 'a' või täht on 'b'
 abc != "c"  # täht ei ole 'c'
 !(abc == "c")  # eitame väidet, et täht on 'c'
 
@@ -329,7 +329,7 @@ table(y)
 # Näide: vaatame tähestiku algust, moodustame kolme moodi tõevektori, mille väärtus on TRUE, kui täht on 'a' või 'b' ning on FALSE vastasel korral
 abc <- letters[1:3]
 abc
-abc == "a" | abc == "b" # täht on 'a' või täiht on 'b'
+abc == "a" | abc == "b" # täht on 'a' või täht on 'b'
 abc != "c"  # täht ei ole 'c'
 !(abc == "c")  # eitame väidet, et täht on 'c'
 
