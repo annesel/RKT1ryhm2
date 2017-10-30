@@ -1,7 +1,7 @@
 ---
 title       : Vektorite loomine, elementide valik
 description : Kolmas teema - vektorid
---- type:NormalExercise lang:r xp:100 skills:1 key:fead53a9da
+--- type:NormalExercise lang:r xp:100 skills:1 key:ec64c03bcd
 ## Vektorid 1
 
 - Üksikuid arve või tekstiväärtusi saab kokku panna vektoriks funktsiooni `c()` (*combine*) abil. 
@@ -103,7 +103,7 @@ success_msg("Super! Liigu järgmise ülesande juurde.")
 
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:dd8c92ca90
+--- type:NormalExercise lang:r xp:100 skills:1 key:2c0fd8e002
 ## Vektorid 2
 
 Väga sageli on tarvis vektorist kätte saada meile hetkel vajalikku alamosa. Vaatame paari võimalust vektorist elementide välja noppimiseks. 
