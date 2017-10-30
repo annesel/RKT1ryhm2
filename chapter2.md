@@ -1,7 +1,7 @@
 ---
 title       : Muutujate kasutamine
 description : Teine teema - muutujad
---- type:NormalExercise lang:r xp:100 skills:1 key:37c4f0905d
+--- type:NormalExercise lang:r xp:100 skills:1 key:5baa0d5670
 ## Muutujad 
 
 R-is võivad muutujate nimed sisaldada suuri ja väikesi tähti, numbreid, punkti ja alakriipsu. Erandiks on see, et nimi ei või alata numbri või alakriipsuga. Näiteks saab omistada `x`-le väärtuse 3 järgmiselt: `x <- 3`. 
@@ -211,7 +211,7 @@ success_msg("Tubli!")
 
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:afbd985a3d
+--- type:NormalExercise lang:r xp:100 skills:1 key:285ccb190b
 ## Tekstiväärtusega muutujad
 
 Muutujad võivad olla ka tekstilised. Näiteks `x <- "Tere maailm!"` omistab muutujale `x` väärtuseks teksti `Tere maailm!`.
