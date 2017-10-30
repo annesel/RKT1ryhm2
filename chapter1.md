@@ -1,7 +1,7 @@
 ---
 title       : R kui kalkulaator
 description : Esimene teema - kalkulaator, omistamine
---- type:NormalExercise lang:r xp:0 skills:1 key:07547c77c0
+--- type:NormalExercise lang:r xp:0 skills:1 key:7483cd3c09
 ## Sissejuhatus
 
 Kirjuta kõigi ülesannete lahendused paremal aknapoolel olevasse *script.R* lehele, vastava ülesande sõnastuse alla. Siinses näites on esimese ülesande lahendus juba kirja pandud.
@@ -68,7 +68,7 @@ success_msg("Tubli! Asu nüüd päris ülesandeid lahendama!")
 
 <!--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
 
---- type:NormalExercise lang:r xp:100 skills:1 key:0f25fc4161
+--- type:NormalExercise lang:r xp:100 skills:1 key:65ef1386ac
 ## Arvutamine
 
 Esmalt mõned arvutusülesanded. 
