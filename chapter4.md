@@ -1,7 +1,7 @@
 ---
 title       : Väärtuste tüübid
 description : Neljas teema - väärtuste tüübid, tõeväärtused
---- type:NormalExercise lang:r xp:100 skills:1 key:bcc48c5aea
+--- type:NormalExercise lang:r xp:100 skills:1 key:5e89d5ccd7
 ## Väärtuste tüübid. Puuduvad väärtused
 R-is on põhilised väärtuste tüübid, mida kasutame:
 
@@ -126,7 +126,7 @@ success_msg("Tubli töö!")
 
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:e6061d1945
+--- type:NormalExercise lang:r xp:100 skills:1 key:efa4b167fa
 ## Veel tõeväärtustest 1
 
 Tõeväärtuseid on kaks: `TRUE` ja `FALSE`. R saab aru ka lühenditest `T` ja `F`.
@@ -263,7 +263,7 @@ success_msg("Tubli! Järgmine ülesanne on viimane.")
 
 
 
---- type:NormalExercise lang:r xp:100 skills:1 key:1bc0bcb89e
+--- type:NormalExercise lang:r xp:100 skills:1 key:720b8a9769
 ## Veel tõeväärtustest 2
 
 Tõeväärtuseid on kaks: `TRUE` ja `FALSE`. R saab aru ka lühenditest `T` ja `F`.
